@@ -1,0 +1,16 @@
+---
+description: Use B5X motion control documentation as reference for post processor work
+alwaysApply: true
+---
+
+# B5X Motion Control Reference
+
+When working in this workspace (especially on post processors like Laguna_IQ_Shift_RevA.cps or Laguna_IQ_Turner.cps), use **B5X_Motion_Control_System.txt** as reference context for:
+
+- G-code and M-code behavior and syntax for the B5X / Laguna IQ control
+- Axis and motion behavior, limits, and conventions
+- Any control-specific requirements that affect NC output
+
+Read `B5X_Motion_Control_System.txt` when answering questions about the control system, validating or suggesting G/M codes, or making post processor changes that depend on machine behavior.
+
+The file is in the workspace root: `B5X_Motion_Control_System.txt`.
