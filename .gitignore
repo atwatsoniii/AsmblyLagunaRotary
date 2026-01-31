@@ -1,0 +1,55 @@
+# OS
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editors & IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.settings/
+*.sublime-*
+
+# Build & output
+build/
+dist/
+out/
+*.log
+*.tmp
+*.temp
+.cache/
+
+# Environment & secrets
+.env
+.env.local
+.env.*.local
+*.pem
+secrets/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+.venv/
+*.egg-info/
+.eggs/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Backup & archives
+*.bak
+*.backup
+*.zip
+*.tar.gz
