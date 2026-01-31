@@ -88,9 +88,9 @@ var secFormat = createFormat({decimals:3}); // seconds - range 0.001-99999.999
 var taperFormat = createFormat({decimals:1, scale:DEG});
 
 var xOutput = createVariable({prefix:"X"}, xyzFormat);
-var yOutput = createVariable({prefix:"A"}, xyzFormat);
+var yOutput = createVariable({prefix:"Y"}, xyzFormat);
 var zOutput = createVariable({onchange:function () {retracted = false;}, prefix:"Z"}, xyzFormat);
-var aOutput = createVariable({prefix:"Y"}, abcFormat);
+var aOutput = createVariable({prefix:"A"}, abcFormat);
 var bOutput = createVariable({prefix:"B"}, abcFormat);
 var cOutput = createVariable({prefix:"C"}, abcFormat);
 var feedOutput = createVariable({prefix:"F"}, feedFormat);
@@ -510,7 +510,9 @@ function setWorkPlane(abc) {
   }
 
   onCommand(COMMAND_UNLOCK_MULTI_AXIS);
-  if (!retracted) {
+  // Don't retract to Z0 for pattern operations - they're just rotated instances
+  var isPatternOperation = (currentSection.getPatternId && typeof currentSection.getPatternId === 'function' && currentSection.getPatternId() != 0);
+  if (!retracted && !isPatternOperation) {
     writeRetract(Z);
   }
 
@@ -541,7 +543,7 @@ function setWorkPlane(abc) {
     gMotionModal.reset();
     writeBlock(
       gMotionModal.format(0),
-      conditional(machineConfiguration.isMachineCoordinate(0), "Y" + abcFormat.format(abc.x)), //NN changed to Y from A
+      conditional(machineConfiguration.isMachineCoordinate(0), "A" + abcFormat.format(abc.x)), //NN changed back to A for rotary axis
       conditional(machineConfiguration.isMachineCoordinate(1), "B" + abcFormat.format(abc.y)),
       conditional(machineConfiguration.isMachineCoordinate(2), "C" + abcFormat.format(abc.z))
     );
@@ -804,7 +806,15 @@ function onSection() {
   forceAny();
   gMotionModal.reset();
 
-  var initialPosition = getFramePosition(currentSection.getInitialPosition());
+  // For multi-axis operations with cancelled transformation, CAM provides machine coordinates, so use raw position
+  // For pattern operations: if transformation was cancelled, use raw position; otherwise transform
+  // Otherwise transform from work plane to machine coordinates
+  var rawInitialPosition = currentSection.getInitialPosition();
+  var isPatternOperation = (currentSection.getPatternId && typeof currentSection.getPatternId === 'function' && currentSection.getPatternId() != 0);
+  // Only use raw position for patterns if transformation was cancelled (multi-axis patterns)
+  // For regular patterns without cancelled transformation, we need to transform
+  var useRawPosition = currentSection.isMultiAxis() || (isPatternOperation && useMultiAxisFeatures);
+  var initialPosition = useRawPosition ? rawInitialPosition : getFramePosition(rawInitialPosition);
   if (!retracted && !insertToolCall) {
     if (getCurrentPosition().z < initialPosition.z) {
       writeBlock(gMotionModal.format(0), zOutput.format(initialPosition.z));
@@ -834,7 +844,7 @@ function onSection() {
     if (!machineConfiguration.isHeadConfiguration()) {
       writeBlock(
         gAbsIncModal.format(90),
-        gMotionModal.format(0), xOutput.format(initialPosition.x)/*, yOutput.format(initialPosition.y)*/ //NN removed Y
+        gMotionModal.format(0), xOutput.format(initialPosition.x), yOutput.format(initialPosition.y)
       );
       writeBlock(gMotionModal.format(0), zOutput.format(initialPosition.z));
     } else {
@@ -842,7 +852,7 @@ function onSection() {
         gAbsIncModal.format(90),
         gMotionModal.format(0),
         xOutput.format(initialPosition.x),
-        //yOutput.format(initialPosition.y),
+        yOutput.format(initialPosition.y),
         zOutput.format(initialPosition.z)
       );
     }
