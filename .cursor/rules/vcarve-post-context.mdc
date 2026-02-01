@@ -1,0 +1,19 @@
+---
+description: Use VCarve post processor documentation when working on Vcarve post processors
+globs: ["Vcarve/**", "**/Vcarve/**"]
+alwaysApply: false
+---
+
+# VCarve Post Processor Reference
+
+When working on post processors in the **Vcarve** directory (e.g. `Laguna_IQ_Turner_Vcarve.pp`, `Laguna_IQ_Turner_Vcarve_proposed.pp`), use **Vcarve/Vcarve_Post_Processor_info.mhtml** as reference context for:
+
+- Post processor structure, sections, and formatting
+- Global file statements (e.g. `ROTARY_WRAP_Y`, `ROTARY_WRAP_X`, `INVERSE_TIME_MODE`)
+- Variables and output codes (`[A]`, `[WRAP_DIA]`, `[FI]`, etc.)
+- 4th axis / rotary configuration and wrapped output (Y→A, X→B)
+- Block definitions (HEADER, RAPID_MOVE, FEED_MOVE, FOOTER, etc.)
+
+Read `Vcarve/Vcarve_Post_Processor_info.mhtml` when editing `.pp` files, adding or changing rotary/wrap settings, or answering questions about VCarve post processor behavior.
+
+The file is at: **Vcarve/Vcarve_Post_Processor_info.mhtml**.
