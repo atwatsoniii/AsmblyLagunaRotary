@@ -119,7 +119,7 @@ begin NEW_SEGMENT
 begin FOOTER
 
 +"[N] G00 [ZH]"
-+"[N] G00 [YH] [XH]"
++"[N] G00 [XH] [YH]"
 +"[N] M09"
 "[N] M05"
 "[N] M30"
