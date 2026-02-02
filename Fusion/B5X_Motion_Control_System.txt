@@ -1,0 +1,4878 @@
+Beijing RichAuto S&T Corp., Ltd
+
+RichAuto-B5X Series Motion Control System
+User’s Manual
+
+Applied in B5X system
+Free download on RichAuto website
+
+北京锐志天宏科技股份有限公司
+Beijing RichAuto S&T Corp., Ltd.
+Add: 5th floor , No. 4 building , No. 4 Yard, Zhongguanyuan Rd., Zhongguancun Life Science Park, Beiqing
+St., Changping District, Beijing-102206, China
+Tel/ Fax：+86(010)-53275118/53275119
+
+Web: www.richauto.com.cn/richnc.com.cn
+
+1
+
+Beijing RichAuto S&T Corp., Ltd
+
+Thank you for choosing RichAuto products!
+This manual helps you be familiar with the company's products, and get information
+about systems’ components、configuration etc.
+This manual contains detailed knowledge of the system characteristics 、 operating procedures, installation
+&commissioning, and safety precautions. Please read this manual carefully before using the system and machine, which
+will help you to use it better.
+
+Cautions:
+1. It’s strictly prohibited in the strong interference and strong magnetic field environment. Operating ambient
+temperature：0-70 ℃；Environment humidity： 0-90% (Non-condensing).
+2. Insert U disk in the correct direction. Do not pull out or insert 50-pin signal transmission cable when system is
+powered on.
+3. During the perform processing in U disk file, do not pull out the U disk to prevent the interruption of data
+transmission.
+4. Strictly prohibited metal, dust, and other conductive substances drop into the handheld controller shell.
+5. The machine casing shall be well grounded to ensure work safety and prevent interference.
+6. Unauthorized removal is strictly prohibited, no internal user repairable parts.
+7. For long time not using, please power off and keep it properly.
+8. Be careful to prevent it from water, dust, fire when using.
+9. Do not use the corrosive chemical solvents to clean the device.
+10. Spindle motor bearing life and its speed is inversely proportional.
+11. Graver is very sharp. Do not touch when it is running, in order to avoid injury; Do not use handkerchiefs, scarves to
+approach it to prevent embroiled damage.
+
+Important statement:
+The Company shall not be responsible for any loss caused by improper using or failure to comply with the rules of
+operation.
+Beijing RichAuto S&T Co., Ltd owns final interpretation of this manual, we reserves the rights to revise all information in
+this manual, including data, technical details, etc.
+
+2
+
+Beijing RichAuto S&T Corp., Ltd
+
+CONTENT
+
+
+1
+
+2
+
+3
+
+4
+
+5
+
+FORWARD ...................................................................................................................................................................... 1
+1)
+
+System introduction ...................................................................................................................................................................... 1
+
+2)
+
+Performance characteristics ......................................................................................................................................................... 1
+
+3)
+
+Product parameters ...................................................................................................................................................................... 2
+
+4)
+
+Model list ...................................................................................................................................................................................... 2
+
+RICHAUTO SYSTEM INTRODUCTION ............................................................................................................................... 3
+1.1
+
+SYSTEM STRUCTURE ............................................................................................................................................................ 3
+
+1.2
+
+SYSTEM STARTUP METHOD.................................................................................................................................................... 4
+
+1.3
+
+COMPONENTS DESCRIPTION .................................................................................................................................................. 4
+
+1.4
+
+WIRING BOARD MOUNTING DIMENSIONS ................................................................................................................................ 5
+
+HANDHELD CONTROLLER BUTTONS INTRODUCTION ..................................................................................................... 6
+2.1
+
+BUTTONS DESCRIPTION ........................................................................................................................................................ 6
+
+2.2
+
+USING METHODS ................................................................................................................................................................ 6
+
+2.3
+
+KEYS SPECIFICATION ............................................................................................................................................................ 7
+
+WIRING DESCRIPTION .................................................................................................................................................... 9
+3.1
+
+WIRING BOARD TERMINALS .................................................................................................................................................. 9
+
+3.1.1
+
+STEPPER WIRING BOARD....................................................................................................................................................... 9
+
+3.1.1.1
+
+STEPPER TYPE ................................................................................................................................................................ 9
+
+3.1.1.2
+
+I/O PORTS OF STEPPER BOARD ........................................................................................................................................ 10
+
+3.1.2
+
+SERVO WIRING BOARD ....................................................................................................................................................... 13
+
+3.1.2.1
+
+SERVO BOARD .............................................................................................................................................................. 13
+
+3.1.2.2
+
+I/O PORTS OF SERVO BOARD ........................................................................................................................................... 14
+
+3.1.3
+
+HARDWARE WIRING .......................................................................................................................................................... 17
+
+3.2
+
+DEBUGGING OF MACHINE AND CONTROL SYSTEM .................................................................................................................... 25
+
+USER INTERFACE INTRODUCTION ................................................................................................................................. 25
+4.1
+
+MANUAL CONTROL USER INTERFACE .................................................................................................................................... 26
+
+4.2
+
+MANUAL FUNCTION USER INTERFACE ................................................................................................................................... 27
+
+4.2.1
+
+MACHINE SETUP ............................................................................................................................................................... 28
+
+4.2.2
+
+AUTO PRO SETUP ............................................................................................................................................................. 37
+
+4.2.3
+
+SYSTEM SETUP ................................................................................................................................................................. 43
+
+4.2.4
+
+OPERATE FILE .................................................................................................................................................................. 47
+
+4.2.5
+
+VERSION VIEW ................................................................................................................................................................. 49
+
+4.3
+
+REMOTE CONTROL USER INTERFACE (RESERVED)...................................................................................................................... 49
+
+4.4
+
+INPUT OUTPUT CONTROL USER INTERFACE.............................................................................................................................. 50
+
+4.5
+
+TOOL PATH USER INTERFACE ................................................................................................................................................ 51
+
+MACHINE OPERATION .................................................................................................................................................. 51
+5.1
+
+RETURN HOME (ZRN) ..................................................................................................................................................... 51
+
+5.2
+
+LOAD PROCESSING FILE....................................................................................................................................................... 52
+
+5.3
+
+MANUAL OPERATION ........................................................................................................................................................ 52
+3
+
+Beijing RichAuto S&T Corp., Ltd
+
+6
+
+7
+
+5.3.1
+
+MANUAL SPEED SWITCHING AND ADJUSTMENT ....................................................................................................................... 53
+
+5.3.2
+
+MANUAL MOVEMENT MODES ............................................................................................................................................. 53
+
+5.4
+
+AUTO PROCESSING OPERATION ............................................................................................................................................ 55
+
+5.4.1
+
+SET WORK ORIGIN ............................................................................................................................................................. 55
+
+5.4.2
+
+LOAD PROCESSING FILE....................................................................................................................................................... 55
+
+5.4.3
+
+SET AUTO PROCESSING PARAMETERS .................................................................................................................................... 55
+
+5.5
+
+OPERATIONS DURING PROCESSING ....................................................................................................................................... 56
+
+5.5.1
+
+SPEED RATIO & SPINDLE STATE ADJUSTING.............................................................................................................................. 56
+
+5.5.2
+
+PAUSE & POSITION ADJUSTMENT ......................................................................................................................................... 56
+
+5.5.3
+
+BREAKPOINT PROCESSING &POWER FAILURE RECOVERY ............................................................................................................ 57
+
+5.6
+
+ADVANCED WORK ............................................................................................................................................................ 60
+
+B55 MULTI HEADS WITH CYLINDERS MOTION CONTROL SYSTEM INTRODUCTION ....................................................... 69
+6.1
+
+B55 COMBINATION KEYS .................................................................................................................................................... 69
+
+6.2
+
+MULTI TOOL COUNT .......................................................................................................................................................... 69
+
+6.3
+
+MULTI HEADS OFFSET SETTING............................................................................................................................................. 70
+
+6.3.1
+
+X AND Y AXIS DIRECTION OFFSET .......................................................................................................................................... 70
+
+6.3.2
+
+Z AXIS DIRECTION OFFSET ................................................................................................................................................... 71
+
+6.4
+
+CYLINDER DELAY TIME ....................................................................................................................................................... 72
+
+6.5
+
+PROGRAMMING EXAMPLE .................................................................................................................................................. 72
+
+B57 AUTOMATIC TOOL CHANGE MOTION CONTROL SYSTEM ....................................................................................... 73
+7.1
+
+TOOL CHANGE WORK MODE ............................................................................................................................................... 73
+
+7.2
+
+B57 ATC SYSTEM CONSTRUCTION ....................................................................................................................................... 73
+
+7.3
+
+IO PORT DEFINITION: ......................................................................................................................................................... 74
+
+7.4
+
+TOOL CHANGE FUNCTION KEYS ........................................................................................................................................... 75
+
+7.5
+
+ATC MENU .................................................................................................................................................................... 75
+
+7.6
+
+MANUAL TOOL LOADING OPERATION .................................................................................................................................... 75
+
+7.7
+
+SET AUTOMATIC TOOL CHANGE POSITION ............................................................................................................................... 75
+
+7.7.1
+
+SET ATC POSITION BY MOVING MACHINE MANUALLY ................................................................................................................ 76
+
+7.7.2
+
+SET ATC POSITION BY INPUTTING COORDINATES VALUES ......................................................................................................... 76
+
+7.8
+
+MANUAL TOOL SWITCHING ................................................................................................................................................ 76
+
+7.8.1
+
+TOOL LOADING PROCEDURE: ............................................................................................................................................... 77
+
+7.8.2
+
+TOOL UNLOADING PROCEDURE ............................................................................................................................................ 77
+
+7.9
+
+SET TOOL BIT Z DIRECTION OFFSET ........................................................................................................................................ 78
+
+7.10
+
+MACHINE AUTOMATIC TOOL SETTING .................................................................................................................................... 78
+
+8
+
+B58 FOUR AXIS MOTION CONTROL SYSTEM ................................................................................................................. 79
+
+9
+
+P.S.1: SYSTEM UPDATE ................................................................................................................................................. 80
+
+10
+
+P.S.2. COMMON TROUBLESHOOTING ........................................................................................................................... 81
+10.1
+
+SOLUTION FOR HANDLE SCREEN PROMPTS PROBLEMS ............................................................................................................... 81
+
+10.2
+
+COMMON PROBLEMS DURING OPERATION ............................................................................................................................. 82
+
+10.3
+
+ELECTRICAL COMPONENTS AND WIRING PROBLEMS.................................................................................................................. 84
+
+4
+
+Beijing RichAuto S&T Corp., Ltd
+
+
+
+Forward
+
+1) System introductin
+RichAuto CNC motion control systems are independently developed by Beijing RichAuto S&T Co., Ltd. It can be
+widely applied to machinery, advertisement, woodworking, Jade carving, mold engraving machines, laser, flame,
+plasma cutting machines, woodworking lathe, dispensing machine and so on in the industry machine control field.
+RichAuto makes DSP as the core control system, High-speed processing operation which the microcontroller and
+PLC systems can’t compare with; Embedded structure, high degree of integration, Strong stability, easy to installation
+and operation; support U disk, removable storage card reader, with USB interface, high speed transfer，plug and play .
+Fully offline work.
+
+2) Performance characteristics
+a)
+
+b)
+c)
+d)
+
+System standard configuration is X, Y, Z axis motion control method, and supports the rotation axis（C axis）control
+which enables the switch between rotary machining and plane processing . Can be extended to X, Y, Z, C four-axis
+motion control to realize 4 axes linkages control.
+Multiple I/O ports control. Standard equipped with I/O signal node stepper board which has 16 inputs and 8
+output signals, servo board has 16 inputs and 16 outputs.
+Support the standard G code, PLT format instructions; support domestic and international mainstream CAM
+software, such as: Type3, Artcam, UG, Pro/E, MasterCAM, Cimatron, Ucancam etc.
+Provide with power failed protection. System automatically save the current processing information in the
+
+moment of sudden power down (file name, current line number, work speed, spindle state)；After powered up and
+returned HOME position, the system automatically prompts the user to restore the processing before power down
+which makes processing operations become more humanity.
+e) Support breakpoint memory & file line No. selection processing. It can save up to 8 different breakpoints
+processing information.
+f) Multi-coordinate memory function. Provide 9 working coordinate systems. The User can switch among the 9
+coordinates; each coordinate system saves 1 work origin.
+g) Support adjusting spindle operating frequency (or spindle rotate speed). The spindle frequency is divided into 8
+shifts. During processing, user can adjust shifts directly by keys, and no need suspend processing.
+h) Support 0-10V analog output, accurately controls the spindle speed.
+i) Support network communication which realizes files loading, machine operation controlling; or just reads files in U
+disk/card reader directly, plug and play.
+j) Support adjust speed ratio during operation. To adjust the speed ratio so as to change the processing speed and
+travel speed, speed ratio values from 0.1-1. Increasing or decreasing 0.1 per time.
+k) Simple manual operate mode. In manual mode, the system provides 3 kinds of move modes, including continuous,
+step (crawl), distance, become more simple and convenient.
+l) Identifies M code, F code and other extended instructions, and it can also open a special code based on user’s
+needs.
+m) Built-in 1 G memory and 5 inches color screen to achieve 1:1 simulation of processing job.
+n) Self-detection function. The system comes with I/O ports signal detection function for easy remote maintenance.
+o) High speed and stable machining characteristics, support high subdivision, ensure high precision, high speed
+processing.
+p) Standard English and Chinese double display interfaces. Supports simplify Chinese, traditional Chinese, English,
+Russian, French languages etc. which can be customized as needed.
+q) System support automatic dynamic upgrade, more convenient remote operation and remote maintenance.
+1
+
+Beijing RichAuto S&T Corp., Ltd
+
+3) Product parameters
+Model No.
+
+RichAuto-B5X
+
+CPU
+
+DSP
+
+Power
+protection
+
+Built in memory
+
+1GB
+
+Breakpoint processing
+
+limitless
+
+Display screen
+
+5〞 color screen
+
+External supply voltage
+
+DC 24V
+
+down
+
+Support
+
+Continuous,
+
+U disk、network
+Communication port
+
+step,
+
+Manual mode
+distance
+3-4 axis
+
+Straight
+
+Linkage axis No.
+
+line,
+
+arc,
+
+Interpolate method
+spline curve
+
+Control signal
+
+Differential signal
+
+Soft / hard limit
+
+Support
+
+Driving system
+
+Step / servo motor
+
+Maximum
+frequency
+
+Minimum input unit
+
+0.001mm
+
+Password protection
+
+pulse
+
+10MHz
+Support
+
+Simplified Chinese, English, traditional Chinese, other languages can be
+Languages
+customized
+Standard layout
+
+Handheld controller 1 pc; HDMI data transmission cable 1 pc; I/O board 1
+pc.
+
+4) Model list
+
+B5X series motion
+control system
+
+Model No.
+
+Model Name
+
+B51
+
+Three axis linkages motion control system
+
+B55
+
+Multi-process motion control system
+
+B57
+
+ATC motion control system
+
+B58
+
+Four axis linkages motion control system
+
+2
+
+Beijing RichAuto S&T Corp., Ltd
+
+1 RichAuto system introduction
+1.1 System structure
+RichAuto control system contains the following parts: Handheld controller 1pc, I/O board1pc, 19-pin HDMI data
+transmission cable 1pc.
+HANDHELD CONTROL
+
+H19-PIN HDMI CABLE
+
+STEPPER I/O BOARD
+
+SERVO I/O BOARD
+
+3
+
+Beijing RichAuto S&T Corp., Ltd
+
+1.2 System startup method
+RichAuto–B5X motion control system covers 2 modes—Normal start & Emergency start：
+Normal start: Supply power to the system as usual. The system will access into “HOME Type at Start” control
+interface after starting up.
+Emergency start: User can emergency start the system if the system doesn’t show any words or can’t access into
+the “manual control user interface”.
+
+Power off at first, then hold down“
+
+“
+
+”key without release it, supply power to the controller, release
+
+” button after 3-4 seconds past. The system will show “Emergency State”, and then user could select
+
+“system update”, “inner format” or “date initial” according to the situation. Or do nothing, just power off and restart it
+normally.
+
+1.3 Components description
+
+1)
+
+LCD display screen: 5 inches liquid crystal display which is used to show the machine motion and system settings
+4
+
+Beijing RichAuto S&T Corp., Ltd
+
+information etc.
+2)
+
+Keypad: 24 buttons to be used to input system parameters and control machine motion etc.
+
+3)
+
+U flash disk interface：U disk or other external memory port. The external memory system format is FAT16/32.
+
+4)
+
+19-pin HDMI cable socket：To be used to connect between controller and I/O board, to transmit the output signal
+come from the controller to machine actuator.
+
+1.4 Wiring board mounting dimensions
+Stepper board
+
+Servo board
+
+5
+
+Beijing RichAuto S&T Corp., Ltd
+
+2 Handheld controller buttons introduction
+2.1 Buttons description
+RichAuto–B5X motion control system has defined 24 operation buttons, realize all operations of the machine actuator
+by using single key or combination keys, each key or combination keys provides one or more functions under different
+working conditions:
+
+Photograph of pressing keys
+
+2.2 Using methods
+RichAuto control system has 2 kinds of pressing keys operation methods. Single key operation & Combination
+keys operation.
+Single key： Press one key on the keypad is executing the single key operation.
+Combination keys：Press two keys at the same time to achieve a certain function is executing combination keys
+operation；The operation steps: push down the first main function key do not release it, meanwhile press the second
+auxiliary function key, after that release both of the two keys at the same time to realize the combination keys
+
+operation. For instance, the system upgrade combination keys are“
+
+6
+
+”+“
+
+”. When operation, user
+
+Beijing RichAuto S&T Corp., Ltd
+
+should push down the main function key “
+
+key“
+
+”first but not release it, and then push the second auxiliary function
+
+”, and release them together.
+Commonly used combination keys:
+
+Combination Keys
+
+Functions
+Coordinates systems switching keys
+0 is mechanical coordinate system
+
+1
+
+“
+
+”+“0—9”numeric key
+
+1-9are working coordinate system
+
+2
+
+System upgrade
+“
+
+”+“
+
+”
+
+3
+
+Switching spindle shifts in manual mode
+“
+
+”+“
+
+”
+
+2.3 Keys specification
+Key Name
+
+Function
+X+ axis direction move/ digit 6 input/ menu left move selection
+
+X- axis direction move/ digit 4 input/ menu right move selection
+Y+ axis direction move/ increase speed ratio in auto processing
+mode/ digit 2 input/ menu move up selection
+Y- axis direction move/ reduce speed ratio in auto processing mode/
+digit 8 input/ menu move down selection
+Z+ axis direction move/ digit 3 input/ increase spindle speed in auto
+processing mode
+Z- axis direction move/ digit 9 input/ reduce spindle speed in auto
+processing mode
+C+ axis direction move/ digit 1 input
+
+7
+
+Beijing RichAuto S&T Corp., Ltd
+
+C- axis direction move/ digit 7 input
+
+Set X axis and Y axis work origin
+
+Set Z axis and C axis work origin
+
+Start Z axis automatic tool setting / minus sign input
+Return to ZERO point(Mechanical origin) in manual mode/ digit 0
+input
+High/low speed switching in manual mode/ digit 5 input
+
+Control spindle ON/OFF in manual mode/ decimal point input
+Enter MENU settings/ machine tool states display switching during
+auto processing
+Return reference point operation/ OK key of all selection, text inputs
+and operations
+Manual motion states/ switching of continuous, step, distance 3
+modes
+Loading files from U disk or inner storage space
+
+Repeat previous file machining
+
+Start advance processing function， such as ‘Array work’, ‘mirror work’
+
+Tool change among T1,T2,T3 and T4
+
+Start breakpoint resume function
+
+RUN/ PAUSE processing file;
+DELETE the input data;
+8
+
+Beijing RichAuto S&T Corp., Ltd
+
+Selection of different attribute in MENU
+
+Motion parameter adjustment in manual mode;
+processing termination;
+Cancellation of various options, inputs and operations during
+processing
+
+3 Wiring description
+3.1 Wiring board terminals
+3.1.1 Stepper wiring board
+3.1.1.1
+
+Stepper type
+
+9
+
+Beijing RichAuto S&T Corp., Ltd
+
+3.1.1.2
+Terminal
+
+I/O ports of stepper board
+Name
+
+Pin definition
+
+Pin functions
+and parameters
+
+24V+
+
+Input power supply+
+
+To provide 24V operating voltage after power
+
+DC24V
+
+on, recommend to use DC 24V (current≥3A)
+
+24VInput power supply-
+
+power supply
+P+
+
+P-
+
+X axis pulse+
+
+P+ and P- for pulse differential pair signals,
+
+differential signal
+
+using twisted pair will improve its
+
+X axis pulse-
+
+anti-interference ability
+
+X_AXIS
+
+differential signal
+D+
+
+D-
+
+X axis direction+
+
+D+ and D- for directional differential pair
+
+differential signal
+
+signals, using twisted pair will improve its
+
+X axis direction-
+
+anti-interference ability
+
+differential signal
+P+
+
+P-
+
+Y axis pulse+
+
+P+ and P- for pulse differential pair signals,
+
+differential signal
+
+using twisted pair will improve its
+
+Y axis pulse-
+
+anti-interference ability
+
+Y_AXIS
+
+differential signal
+D+
+
+D-
+
+Y axis direction+
+
+D+ and D- for directional differential pair
+
+differential signal
+
+signals, using twisted pair will improve its
+
+Y axis direction-
+
+anti-interference ability
+
+differential signal
+P+
+
+P-
+
+Z axis pulse+
+
+P+ and P- for pulse differential pair signals,
+
+differential signal
+
+using twisted pair will improve its
+
+Z axis pulse-
+
+anti-interference ability
+
+Z_AXIS
+
+differential signal
+D+
+
+D-
+
+Z axis direction+
+
+D+ and D- for directional differential pair
+
+differential signal
+
+signals, using twisted pair will improve its
+
+Z axis direction-
+
+anti-interference ability
+
+differential signal
+10
+
+Beijing RichAuto S&T Corp., Ltd
+
+P+
+
+P-
+
+C axis pulse+
+
+P+ and P- for pulse differential pair signals,
+
+differential signal
+
+using twisted pair will improve its
+
+C axis pulse-
+
+anti-interference ability
+
+C_AXIS
+
+differential signal
+D+
+
+D-
+
+C axis direction+
+
+D+ and D- for directional differential pair
+
+differential signal
+
+signals, using twisted pair will improve its
+
+C axis direction-
+
+anti-interference ability
+
+differential signal
+Spindle1
+Spindle2
+
+FWD1
+
+Spindle forward 1
+
+OA1
+
+Analog output 1
+
+GND
+
+Ground signal
+
+FWD2
+
+Spindle forward 2
+
+OA2
+
+Analog output 2
+
+GND
+
+Ground signal
+
+Y01
+
+Spindle
+
+forward
+
+Support 0-10V analog
+
+Support 0-10V analog
+
+/
+
+If the inverter is in parallel with the common
+
+reverse signal
+
+end and FWD, then Y01 no need wiring
+
+OUTPUT SIGNAL
+
+Y02
+
+Spindle speed shift 1
+
+Low Level effective
+
+Y03
+
+Spindle speed shift 2
+
+Low Level effective
+
+Y04
+
+Spindle speed shift 3
+
+Low Level effective
+
+Y05
+
+Definable signal
+
+Low Level effective
+
+Y06
+
+Definable signal
+
+Low Level effective
+
+Y07
+
+Definable signal
+
+Low Level effective
+
+Y08
+
+Definable signal
+
+Low Level effective
+
+24V
+
+DC 24V output
+
+Can be used for DC24V indicator power supply
+
+X01
+INPUT SIGNAL
+
+X HOME signal
+
+Low Level effective, Support mechanical,
+
+（mechanical origin）
+
+proximity, photoelectric and other types of
+HOME sensors
+
+X02
+
+X03
+
+（mechanical origin）
+
+Low Level effective, Support mechanical,
+proximity, photoelectric and other types of
+HOME sensors
+
+Z HOME signal
+
+Low Level effective, Support mechanical,
+
+Y HOME signal
+
+11
+
+Beijing RichAuto S&T Corp., Ltd
+
+（mechanical origin） proximity, photoelectric and other types of
+HOME sensors
+X04
+
+X05
+
+Low Level effective, Support mechanical,
+proximity, photoelectric and other types of
+（mechanical origin） HOME sensors, X04 is tool setting signal on
+three axis controllers
+C HOME signal
+
+Tool setting signal
+
+Low Level effective, support normal tool
+touching plate and tool setting instrument
+
+X06
+
+Drive alarm signal
+
+Low Level effective
+
+X07
+
+Hard limit signal
+
+Low Level effective
+
+X08
+
+Emergency stop signal
+
+Low Level effective
+
+X09
+
+Definable signal
+
+Low Level effective
+
+X10
+
+Definable signal
+
+Low Level effective
+
+X11
+
+Definable signal
+
+Low Level effective
+
+X12
+
+Definable signal
+
+Low Level effective
+
+X13
+
+Definable signal
+
+Low Level effective
+
+X14
+
+Definable signal
+
+Low Level effective
+
+X15
+
+Definable signal
+
+Low Level effective
+
+X16
+
+Definable signal
+
+Low Level effective
+
+COM
+
+common port
+
+24V
+
+Sensor power output
+
+Provide ground signal for the active sensors
+Provide 24V working voltage for active sensors
+
+12
+
+Beijing RichAuto S&T Corp., Ltd
+
+3.1.2 Servo wiring board
+3.1.2.1
+
+Servo board
+
+13
+
+Beijing RichAuto S&T Corp., Ltd
+
+3.1.2.2
+Terminal
+
+I/O ports of servo board
+Position
+
+Pin functions
+and remarks
+
+DC24V
+
+Name
+
+Pin definition
+
+24V+
+
+Input power supply+
+
+To
+
+24V-
+
+Input power supply-
+
+voltage
+
+provide
+
+24V
+
+after
+
+operating
+
+power
+
+on,
+
+recommend to use DC 24V
+(current≥3A) power supply
+
+X_AXIS Y_AXIS Z_AXIS A_AXIS B_AXIS Servo Ports
+
+1
+
+A+
+
+Servo encoder A+
+
+Encoder A+ phase pulse output
+
+2
+
+A-
+
+Servo encoder A-
+
+Encoder A + phase pulse output
+
+3
+
+B+
+
+Servo encoder B+
+
+Encoder B + phase pulse output
+
+4
+
+B-
+
+Servo encoder B+
+
+Encoder B - phase pulse output
+
+5
+
+C+
+
+Servo encoder C+
+
+Used to detect encoder Zero
+
+6
+
+24V
+
+24V
+
+24V
+
+7
+
+C-
+
+Servo encoder C-
+
+Used to detect encoder Zero
+
+8
+
+ALM
+
+Servo Alarm input
+
+Servo Alarm input
+
+9
+
+SRV_ON
+
+Servo enable
+
+Send a signal to the drive, let
+the drive supply power to the
+motor (excitation)
+
+10
+
+SRV_CLR
+
+Servo alarm clear
+
+Clear the alarm signal of the
+servo drive
+
+11
+
+PULS+
+
+Pulse differential +
+
+P+ and P- are pulse differential
+
+12
+
+PULS-
+
+Pulse differential -
+
+pair signals, using twisted pair
+will improve the ability of
+anti-interference
+
+13
+
+SLGN+
+
+Pulse direction +
+
+D+ and D- are direction
+
+14
+
+SLGN+
+
+Pulse direction -
+
+differential pair signals, using
+twisted pair will improve the
+ability of anti-interference
+
+Ha
+
+nd
+
+w
+
+he
+
+el
+
+int
+
+15
+
+GND
+
+24V circuit Ground
+
+24V circuit Ground
+
+1
+
+HX1
+
+Hand wheel speed
+
+Select X1 ratio
+
+14
+
+Beijing RichAuto S&T Corp., Ltd
+
+ratio X1
+2
+
+HX10
+
+Hand wheel speed
+
+Select X10 ratio
+
+ratio X10
+3
+
+HX100
+
+Hand wheel speed
+
+Select X10 ratio
+
+ratio X100
+4
+
+GND
+
+5V circuit Ground
+
+5V circuit Ground
+
+5
+
+5V
+
+5V
+
+Supply power to the handwheel
+encoder（+5V）
+
+6
+
+ESTOP
+
+Handwheel
+emergency stop
+switch
+
+7
+
+HSX
+
+Handwheel
+
+axis
+
+Select X axis
+
+axis
+
+Select Y axis
+
+axis
+
+Select Z axis
+
+axis
+
+Select the 4th axis
+
+selection X
+8
+
+HSY
+
+Handwheel
+selection Y
+
+9
+
+HSZ
+
+Handwheel
+selection Z
+
+10
+
+HS4
+
+Hand
+
+wheel
+
+selection 4
+11
+
+HA+
+
+Handwheel encoder
+Encoder A phase signal
+A+
+
+12
+
+HA-
+
+Handwheel encoder
+A-
+
+13
+
+HB+
+
+Handwheel encoder
+Encoder B phase signal
+B+
+
+14
+
+HB-
+
+Handwheel encoder
+B-
+
+15
+
+HS5
+
+Handwheel
+
+axis
+
+24V circuit Ground
+
+selection 5
+SPINDLE
+
+e
+
+Interfac
+
+1
+2
+
+System reserved
+IN ALM2
+
+Inverter alarm input
+15
+
+Inverter alarm input signal 2
+
+Beijing RichAuto S&T Corp., Ltd
+
+2
+3
+
+SP CCW
+
+Spindle Inversion
+
+Spindle CCW（Spindle 2 CW）
+
+4
+
+SP CW
+
+Spindle Forward
+
+Spindle CW（Spindle 1 CW）
+
+5
+6
+
+System reserved
+OA1
+
+Spindle analog
+
+Spindle analog output 1
+
+output 1
+7
+
+OA2
+
+Spindle analog
+
+Spindle analog output 2
+
+output 2
+8
+
+IN ALM1
+
+Inverter alarm input
+
+Inverter alarm input 1
+
+1
+9
+
+OUTPUT TERMINAL
+
+GND
+
+Ground
+
+Y01
+
+Definable signal
+
+Low level effective
+
+Y02
+
+Definable signal
+
+Low level effective
+
+Y03
+
+Definable signal
+
+Low level effective
+
+Y04
+
+Definable signal
+
+Low level effective
+
+Y05
+
+Definable signal
+
+Low level effective
+
+Y06
+
+Definable signal
+
+Low level effective
+
+Y07
+
+Definable signal
+
+Low level effective
+
+Y08
+
+Definable signal
+
+Low level effective
+
+Y09
+
+Definable signal
+
+Low level effective
+
+Y10
+
+Definable signal
+
+Low level effective
+
+……
+
+Definable signal
+
+Low level effective
+
+Y16
+
+Definable signal
+
+Low level effective
+
+24V
+
+DC 24V output port
+
+Can be used for DC24V indicator
+power supply
+
+INPUT TERMINAL
+
+COM
+
+Common port
+
+Can be used as a Ground signal
+
+X01
+
+X axis HOME signal
+
+Support mechanical and
+photoelectric types switches
+
+X02
+
+Y axis HOME signal
+
+Support mechanical and
+photoelectric types switches
+
+16
+
+Beijing RichAuto S&T Corp., Ltd
+
+X03
+
+Z axis HOME signal
+
+Support mechanical and
+photoelectric types switches
+
+X04
+
+A axis HOME signal
+
+Support mechanical and
+photoelectric types switches
+
+X05
+
+B axis HOME signal
+
+Support mechanical and
+photoelectric types switches
+
+X06
+
+Definable signal
+
+Low level effective
+
+X07
+
+Definable signal
+
+Low level effective
+
+X08
+
+Definable signal
+
+Low level effective
+
+X09
+
+Definable signal
+
+Low level effective
+
+X10
+
+Definable signal
+
+Low level effective
+
+....
+
+Definable signal
+
+Low level effective
+
+X16
+
+Definable signal
+
+Low level effective
+
+24V
+
+DC 24V output port
+
+Can be used for DC24V indicator
+power supply
+
+COM
+
+Common port
+
+Can be used as a Ground signal
+
+3.1.3 Hardware wiring
+Installation Requirements：Switching mode power supply（24V, 3A）, it’s better to add a power supply filter to
+avoid the electric field interference. If origin detecting switch is different power supply type, the special detecting
+switch power supply is needed. (Recommend 24V origin detecting switching type power supply).
+RichAuto-B5X control system is controlled by connecting the interface board to the CNC machine. Generally, the
+interface board terminals can be divided into 2 kinds-input terminals and output terminals：
+
+Input terminals include:
+INPUT (Input signals terminal); DC24V（Main power supply terminal）
+Output terminals include：
+X_AXIS（X axis pulse signal output terminal & Encoder output terminal）
+Y_AXIS（Y axis pulse signal output terminal）
+Z_AXIS（Z axis pulse signal output terminal）
+C_AXIS（C axis pulse signal output terminal）
+OUTPUT（Output signal terminal）
+OA（Analog signal output terminal）
+17
+
+Beijing RichAuto S&T Corp., Ltd
+
+PWM（PWM digital signal output terminal）
+Input terminals
+DC24V Main power supply wiring:
+
+INPUT wiring
+1.
+
+HOME signal ports：
+
+a) Mechanical HOME switch wiring
+
+b) NPN normally open proximity HOME switch
+
+2.
+
+Tool-setting input port：For your attention, X4 port is tool setting port for all of the 3 axis controllers, but X4 will be
+18
+
+Beijing RichAuto S&T Corp., Ltd
+
+mechanical origin signal for the 4 axis controllers, thus X5 will be tool setting signal for 4 axis controllers.
+
+3.
+
+Definable ports wiring：
+Take X6-X8 (they are respectively configured into drive alarm, hard limit, emergency stop signal) for instance
+
+4.
+
+Handwheel Interface wiring
+
+19
+
+Beijing RichAuto S&T Corp., Ltd
+
+5.
+
+SPINDLE terminal wiring
+a)
+
+Stepper board
+
+b)
+
+Servo board
+
+20
+
+Beijing RichAuto S&T Corp., Ltd
+
+6.
+
+Motion axis output terminals wiring
+
+X_AXIS：X axis pulse signal wiring (Y、Z、C axis pulse signal wiring methods are the same to X axis)
+Stepper drive:
+
+Servo drive:
+
+1） Servo axis pin definition
+
+21
+
+Beijing RichAuto S&T Corp., Ltd
+
+2）Brake wiring:
+Yaskawa servo Σ-V series driver
+
+First, ensure that the brake output is enabled, and then set Pn50F to 0300, and select brake signal output terminal
+CN-29 and CN-30.
+Wiring is as follow：
+
+22
+
+Beijing RichAuto S&T Corp., Ltd
+
+OUTPUT: Spindle output
+1 line 2 states：Spindle start—ON；Spindle stop—OFF
+Spindle ON/OFF:
+
+Spindle State (control status):
+Setting method: Enter into "spindle state", the screen displays:
+
+Spindle Count
+
+Press“
+
+”key，input digit 1 to modify the spindle line number to 1 line, and then press“
+
+”key,
+
+the screen will show:
+
+Press“
+
+”、“
+
+”keys could move the cursor up and down, press “
+
+”key to modify the
+
+indicator color, as like as the figure showing above.
+3 lines 8 states: Spindle start---S1—the first shift spindle speed，S2—the second shift spindle speed，Sn—the N
+shift spindle speed; The screen shows “Fn” when the spindle OFF—“N” is the shift number while spindle stop.
+3 lines，8 states wiring:
+
+23
+
+Beijing RichAuto S&T Corp., Ltd
+
+Spindle state：
+Setting method: Enter into “spindle state”, the screen displays:
+
+Press“
+
+”key and input digit number 3 to change the spindle lines number to 3 lines, and then
+
+press“
+
+”key, the screen shows:
+
+Press“
+
+”、“
+
+”keys could move the cursor up and down, press “
+
+”key to modify the indicator
+
+color, as like as the figure showing above.
+PS：In case there are some inverters internal in parallel with FWD and DCM, or the machine factory’s wiring habit
+is to parallel connect inverter to FWD and DCM, then no need to connect Y1 port anymore. ONLY connect the
+DCM to COM port on the OUTPUT SIGNAL of the wiring board, and also no need to set spindle state again.
+ANALOG- Analog output signal wiring:
+
+24
+
+Beijing RichAuto S&T Corp., Ltd
+
+The spindle max. speed should be set if using analog output. The value can be set at“MENU”- “Menu function
+user interface”-- “machine setup”--“spindle setup”-- “Spindle Max. Spd(speed)”；Meanwhile, modify the G code
+setting at “MENU”-- “Menu function user interface”-- “auto pro setup”--“G code setup”-- “G read S code”，and then
+change the setting into “Read S”. The users can configure the spindle output to Single / multiple analog or multi
+shifts(multi step speed)by themselves under “System setup”-- “Function confi” -- “SpdOutpt(spindle output)”.
+
+3.2 Debugging of machine and control system
+1. Power on the system, do not return machine HOME position immediately, press “Cancel” key to enter into the main
+interface first, and then access the “Menu function user interface”-“machine setup”-“Pulse equiv (equivalent)”to
+input correct values. After that, press direction keys of each axis to move manually and check the motion direction
+of them, if any axis motor direction is opposite to the defined direction, user can change the stepper motor phase
+sequence（exchange A+ & A- or B+ & B-）or servo driver parameters(refer to the servo driver user’s manual) in order
+to make the all axis motion direction correctly.
+2.
+
+Set “HOME sequence” according to the defined mechanical origin position. Enter “Menu function user
+interface”-“machine setup”-“Home setup” - “Home sequence”.
+
+3.
+
+Check whether the Home sensors are working normally. Enter “Menu function user interface”-“machine
+setup”-“Voltage setup”-“Input voltage setup”, and then manually trigger each HOME sensor, if the corresponding
+indicator light up (change from green to red) means the Home sensor is working properly.
+
+It can be determined the machine has been connected properly if all above steps pass the debugging.
+
+4 User interface introduction
+RichAuto-B5X motion control systems have assigned 5 user interfaces ， including：“Menu control user
+25
+
+Beijing RichAuto S&T Corp., Ltd
+
+interface”,“Menu function user interface”, “Remote control user interface”, “Input Output control user interface” and
+“View toolpath user interface”.
+
+4.1 Manual Control User Interface
+After the system is powered on, the system prompts “Home Type At Start” at the boot screen to remind you to
+execute return mechanical origin position operation：
+
+Press“
+
+/
+
+”keys to move the cursor and choose one Home type, and then press“
+
+”key to
+
+confirm.
+
+Press “
+
+”, the screen prompt “Switch user interface” dialog box：
+
+Press“
+
+,
+
+”to choose one user interface as you need, and then press“
+
+”to confirm and
+
+access.
+Manual control user interface
+Title bar
+
+Coordinate system
+
+Simulation area
+
+Machine status
+
+File name
+Message area
+
+26
+
+Beijing RichAuto S&T Corp., Ltd
+
+1.
+
+Title bar: Display system software type（4-axis carving）and company information.
+
+2.
+
+Simulation area: Display processing file simulation graph, tool path and file size etc.
+
+3.
+
+File name: Display file name（including file name extension）, record location.
+
+4.
+
+Message area: Display file loading and complete information.
+
+5.
+
+Coordinate system area: Display the current coordinate system, including machine coordinate system and
+work coordinate system; there are 1-9 work coordinates system, total 9 work coordinates.
+
+6.
+
+Machine status area: Display spindle state, speed mode, motion mode, spindle state, cooling unit state etc.
+
+Under the manual control interface, press“
+
+”key, screen shows “The display function list”， it is convenient
+
+for customers to use different ways to view the simulation image of processing file. Function list as shown below:
+
+4.2 Manual Function User Interface
+
+Menu details：The system menu is divided into 5 primary menus according to its function type: MACHINE SETUP、AUTO
+PRO SETUP、SYSTEM SETUP、OPERATE FILE、VERSION VIEW.
+
+27
+
+Beijing RichAuto S&T Corp., Ltd
+
+4.2.1 Machine setup
+“Machine setup” is used to set the machine hardware related parameters which is always be set by the machine
+manufacturers according to their machine hardware related parameters. All of the parameters once have been set, user
+had better not to modify them unless machine hardware or electrical parameters changes. Users should consult the
+machine factory and modify the parameters of “machine setup” under the guidance of the technical engineer.
+Machine setup menu structure
+
+1. Pulse equivalent
+Linear axis: The number of pulses required to send from the controller in every 1 mm movement of the machine.
+Unit is Pul/mm;
+Rotary axis：The number of pulses required to send from the controller in every 1°rotation of the machine. Unit is
+pulse/degree;
+1)
+
+Stepper motor drive
+
+Linear axis:
+Formula=(Number of pulse per revolution of the motor)/(moving distance per revolution of the motor)。
+“Pulses per revolution” formula:（360°/ stepper angle）* driver subdivision
+Distance per revolution formula:
+Screw drive machine tool = Screw pitch * mechanical transmission ratio(reduction ratio)
+Rack（straight）drive machine tool= rack module * gear teeth number*π*mechanical transmission ratio
+(reduction ratio)
+28
+
+Beijing RichAuto S&T Corp., Ltd
+
+Rack（helical）drive = rack module*gear teeth number*π*mechanical transmission ratio(reduction
+ratio)/cos（helical angle）
+Pulley & belt drive = π*pulley diameter*mechanical transmission ratio(reduction ratio)
+Therefore stepper motor system formula is as below：
+
+
+Screw drive:
+
+360 °
+
+∗Driver subdivision
+
+angle
+pulse = Stepper
+Screw pitch∗transmission ratio
+
+E.g.1:Driver nameplate 1 E.g.2:Driver nameplate2
+Motor nameplate/ stepper angle=1.8°
+Explain: Stepper angle is the data of motor, means the angle of motor rotating for a single step. Driver subdivision is set
+in the driver.
+In E.g.1, Pulse/rev is Pulses per revolution of stepper motor, so that the user only needs to select a relative value
+according to the actual dial code. For example: If user choose 3200 Pulse/rev, indicates (360 °/stepper angle)* Driver
+subdivision=3200.
+In E.g.2, the MSTEP means subdivision number. So, if the stepper angle is 1.8°, selected subdivision is 16, then
+(360 °/stepper angle)* subdivision=(360°/1.8)*16=3200.
+The user should use correct computational method according to the actual marks of stepper motor driver
+nameplate.
+Screw pitch：Represents the distance that the nut moves in one revolution of the ball screw rotation.
+
+Transmission ratio: The ratio of the angular velocity or the rotational speed of the front wheel to the end most driven
+wheel.
+
+
+Rack drive:
+Straight teech:
+29
+
+Beijing RichAuto S&T Corp., Ltd
+
+360 °
+×Driver subdivision
+Stepper angle
+
+pulse = rack module×gear teeth number×π×transmission ratio
+Helical teech:
+
+360 °
+×Driver subdivision×cos（helical angle）
+Stepper angle
+
+pulse = rack module×gear teeth number×π×transmission ratio
+Explain:
+Rack module and gear teeth number are both the parameters of the rack.
+Rack module*gear teeth number*Pi is the pitch circle circumference of the rack.
+
+
+Pulley & belt drive:
+
+360 °
+
+×Driver subdivision
+
+pulse = Stepper angle
+
+πd×transmission ratio
+
+Explain:
+“D” represents the belt pulley diameter.
+Rotary axis:
+Formula = pulses per revolution / angles per revolution（360°）
+
+pulse =
+
+360 °
+×Driver subdivision
+Stepper angle
+
+°×transmission ratio
+
+Setting method： Enter into “Pulse Equiv”menu, cursor in the position of X axis pulse equivalent option,
+
+press“
+
+”,“
+
+”key to move the cursor to the options to be modified, press“
+30
+
+”key, value is in
+
+Beijing RichAuto S&T Corp., Ltd
+
+modifiable state, input values by pushing digit keys, press“
+
+equivalents one by one, and then press“
+
+”key to save the changes. Modify X、Y、Z、A pulse
+
+”key to save all changes, go back to “Pulse Equiv” menu.
+
+No mechanical and electrical parameters situation：If the user is unable to get any mechanical and electrical
+parameters, it can be calculated by the following method,
+
+Suppose the handle pulse equivalent is ‘A’, press "
+
+" switching to “Distance” mode, set a distance value ‘B’,
+
+then you can measure the actual moving distance ‘C’, to get the actual pulse equivalent = A × B ÷ C.
+For example: Suppose handle pulse equivalent A = 400, distance B = 100, actual distance C = 80, then the actual
+pulse equivalent = 400 × 100 ÷ 80 = 500
+Repeat calculation for several times until you get the correct pulse equivalent value.
+2)
+
+Servo motor drive
+
+The handheld controller defaults the factory pulse equivalent value of X、Y、Z、A are all 400, it can be regarded
+as a constant quantity or change a new value. Set the electrical gear ratio on the servo driver, reducible of a fraction.
+Electronic gear ratio numerator: represents encoder resolution which can be achieved in the servo driver manual.
+Electronic gear ratio denominator:
+Linear axis:
+►
+
+Screw drive：pulse equivalent * screw pitch*mechanical transmission ratio
+
+►
+
+Straight rack：pulse equivalent*rack module*gear teeth number*π*mechanical transmission ratio
+
+►
+
+Helical rack：pulse equivalent* rack module*gear teeth number*π*mechanical transmission ratio/cos（helical angle）
+
+►
+
+Pulley&belt drive：pulse equivalent *π*pulley diameter*mechanical transmission ratio
+
+Rotation axis：Pulse equivalent *360 * transmission ratio (reduction ratio)
+2. Table size (Unit: mm)
+RichAuto systems make the table size as soft limit values, in order to avoid machine over travel, machine size
+must be less than or equal to the actual machine travel range values.
+
+Setting method：Enter “Table size” menu，press“
+
+”,“
+
+” to move cursor to option to be modified.
+
+Press “
+
+”key ， the value is in modifiable state ， press digit keys to input new values and then
+
+press“
+
+” key to save the change, modify X 、 Y 、 Z 、 A axis table sizes one by one, after that,
+31
+
+Beijing RichAuto S&T Corp., Ltd
+
+press“
+
+”key to save the changes, and return back to “Table Size” menu.
+3. Spindle Setup：
+
+Spindle delay：Including start delay and stop delay (Unit: ms);
+Spindle state: To be used for setting system parameters, user can set multi-step speed or just spindle ON/OFF to
+control the spindle. The system defaults “3-line 8-state”, if the“1-line 2-state (On/Off)” is needed, change the number
+of lines into 1; Detailed information please refer to spindle output wiring diagram.
+Spindle Max Spd：User should set this menu when selected 10V analog quantity to control the spindle speed, this
+value is the maximum speed of the spindle. Unit: r/minute. No need modify this menu if choosing “multi-step” mode.
+4. Home setup:
+Home speed：Axis moving peed when the machine executes returning HOME, system default speed X, Y: 3000
+mm/min, Z,A: 1800 mm/min.
+Setting method：Enter “Home speed” menu，screen prompts:
+
+Press“
+
+”, “
+
+” to move cursor to option to be modified. Press “
+
+modifiable state，press digit keys to input new values and then press“
+
+remaining options one by one, after that press“
+
+” key to save the change, modify the
+
+”key to save all the changes.
+
+Home sequence: Set the HOME order of each axis when the machine goes HOME position.
+Including:
+
+32
+
+”key，the value is in
+
+Beijing RichAuto S&T Corp., Ltd
+
+Setting：Enter “Home speed”，press“
+
+need and then press “
+
+”、“
+
+”key to move cursor and choose a HOME order as you
+
+” to complete the change.
+
+Home direction: Refers to each axis motion direction when executing HOME operation. This setting depends on
+the position of zero point switch (HOME sensor) of each axis which are installed on the machine. If home switch is
+installed in the positive direction, then home direction should be set as “positive”, and vice versa.
+Setting：Enter “Home direction”，screen shows：
+
+Press down“
+
+modify and press“
+
+”，“
+
+”keys to move to the which option to be modified, press“
+
+”key to
+
+”key to save the change, go back to the “Home Direction” menu.
+
+5. Toolset Setup
+C.A.D. Thickness : (Unit: mm)
+This should input actual tool setter thickness value. It will lead to Z axis over cut if input value is bigger than actual
+thickness; if smaller, Z axis tool bit can’t reach material surface. This parameter can only take effect when user uses auto
+tool setting function. Invalid when manual set workpiece origin (press XY→0, ZC→0)
+6. Voltage setup
+Voltage setup is used to set voltage level（High or Low）of input and output signals. The system defaults green
+light（or light off） stand for normally open state while the red light(or light on) indicates normally closed state. Contains
+33
+
+Beijing RichAuto S&T Corp., Ltd
+
+2 rows of lights which are as shown below:
+
+The top row of lights are input levels：To be used for setting the voltage level of input ports. Input level from No. 1
+to 4 are X, Y, Z axis mechanical origin and tool setter input signal respectively. Note: No. 5 is tool setter input signal on
+B58.
+The bottom row of lights are output levels: To be used for setting the voltage level of output ports. Output levels
+from No. 1 to 4 are spindle ON/OFF, Spindle speed 1, Spindle speed 2, and Spindle speed 3 output ports respectively.
+
+Setting
+
+press“
+
+press“
+
+method:
+
+”or“
+
+Press“
+
+”
+
+or“
+
+”key
+
+can
+
+move
+
+left
+
+and
+
+right
+
+in
+
+the
+
+row,
+
+” key can jump up and down. Move the cursor to the light to be modified,
+
+”key for changing its state and return to previous menu.
+
+7. Max Spd Limit (Max. Speed Limit, Unit: mm/min)
+The maximum moving speed of the three axis of the machine tool, it only takes effect in auto processing mode,
+doesn’t limit the motion speed in manual mode.
+Setting method: Enter “Max Spd Limit” menu, the screen shows,
+
+The“*”refers the speed is infinitely-great and limitless. Press“
+
+cursor to the option to be modified, press down“
+
+press digit keys to input new value and then press “
+
+34
+
+”or“
+
+” key to move the
+
+”key, the value changes into modifiable state,
+
+” key to save the change, modify the
+
+Beijing RichAuto S&T Corp., Ltd
+
+remaining options one by one, after that press“
+
+”key to save all the changes.
+
+8. Input List
+It is used for reviewing input ports signal function from X1-X16.
+
+3 axis
+
+4 axis
+
+Note： The “None used” ports are definable; For B51/55/57,X4 is toolset signal.
+9. Output List
+It is used for reviewing output ports signal function from Y1 to Y16.
+
+Note： The “None used” ports are definable.
+10. Input Confi (configuration)
+To enable or disable input signals, use can choose to disable the ports if some input ports on the wiring
+board haven’t connected to any signal, in order to avoid wiring error or other incorrect operation leading to
+system alarm.
+Setting method：Enter “Input Confi” menu, the screen displays,
+35
+
+Beijing RichAuto S&T Corp., Ltd
+
+Press“
+
+”or“
+
+” to the option to be modified, press down“
+
+corresponding input signal, change the others one by one, after that press“
+
+”key to Enable or Disable the
+
+”key to save the changes.
+
+11. DistTime Limit( Distance time limit, Unit: s)
+The system will automatically change to “Continuous” motion mode if there is no action within a certain period of
+time which is called “Distance Time Limit”. In case the user has set pretty long distance limit time and also forget to
+
+exchange it into “Continuous” mode after use the “Distance”, and pressed “
+
+”key leading to the danger of
+
+spindle hits the machine body. To guarantee the operation safety, we added this menu into the system. The system
+defaults “Distance time limit” value is 30 seconds.
+Setting method: Enter “DistTime Limit” menu. The screen prompts,
+
+Press“
+
+”key and input a new value, after modification press“
+
+36
+
+”to save the change.
+
+Beijing RichAuto S&T Corp., Ltd
+
+4.2.2 Auto Pro Setup
+The “Auto Pro Setup” menu is used for setting parameters of the processing file and G code file read attributes.
+Auto Process Setup menu structure chart
+
+1.
+
+Work Speed (Unit: mm/min)
+
+Include “work speed” and “fast speed”.
+Setting method：Enter “Work speed” menu, the screen prompt:
+
+Press“
+
+press“
+
+”key, input new work speed value and then press“
+
+”to save the change, after that
+
+” key to move the cursor to the “fast speed”(rapid traverse) option, press“
+
+new value，after that press“
+2.
+
+”key to save the change.
+
+Safe Height(Unit: mm)
+
+To be used for setting Z axis cutter lifting height value, the system defaults value is 40.000mm.
+Setting mode: Enter “Safe Height” menu, the screen prompts:
+37
+
+”key and input
+
+Beijing RichAuto S&T Corp., Ltd
+
+Press“
+3.
+
+”key to modify to value and then press“
+
+”key to save the change.
+
+Manual Speed (Unit: mm/min)
+
+The “Manual Speed” refers to the motion speed of each axis when user moves the machine manually, it contains
+“High manual speed” and “Low manual speed”.
+Setting mode：Enter “Low manual speed” menu, the screen shows(High manual speed setting method is the
+same):
+
+Press“
+
+”or“
+
+”key to move up or down to the option to be modified and press“
+
+the value is in modifiable state, input new value and then press“
+
+and A axis low manual speed respectively, after that press“
+
+”key,
+
+”key to save the change, modify X, Y, Z
+
+”key to save and then return to “Low manual
+
+speed” menu.
+4.
+
+Grid Setup(Unit: mm; Rotary axis unit: angle)
+
+The grid value is the distance of each axis movement in manual mode when the user has chosen low step mode or
+high step mode.
+Setting mode: Enter “Grid Setup” menu, the screen displays:
+
+Press“
+
+”or“
+
+”key to move up or down to the option to be modified and press“
+
+the value is in modifiable state, input new value and then press“
+
+38
+
+” key,
+
+” key to save the change, modify X, Y, Z and
+
+Beijing RichAuto S&T Corp., Ltd
+
+A axis manual grid distance (rotary axis is by angle) respectively, after that press“
+
+”key to save all changes,
+
+return to “Grid Setup” menu.
+5.
+
+Work Origin Offset(Refer the details on page 83)
+
+6.
+
+Auto Scale
+
+In auto processing mode, Actual processing speed=work speed*auto scale，it doesn’t affect “fast speed”. User not
+only can change the setting under “Auto scale” menu, but also can modify this setting in the prompt dialog box before
+auto processing.
+Setting：Enter “Auto Scale”，screen shows,
+
+Press“
+7.
+
+”key, input new value, after modification press“
+
+”key to save the change.
+
+Fall Scale
+
+Including fall scale and fall height. Fall scale value system default is 0.2; Fall speed=fast speed*fall scale;
+Max. Fall speed= Z axis negative speed limit*fall scale;
+The value of fall scale can be modified under this menu and in the prompt dialog box before auto processing.
+Fall height, system defaults value is 5mm. The fall scale will take effect when tool bit is 5mm over the work surface. Unit
+is mm.
+Setting： Enter “Fall Scale”，screen prompts:
+
+8.
+
+Stop Status
+
+Stop position of the machine while auto machining is finished. User can choose a location in the system “Action after
+39
+
+Beijing RichAuto S&T Corp., Ltd
+
+work” list or set a designated location by input coordinate system value of each axis.
+
+Set designated location，press“
+
+then press “
+
+”or“
+
+”key to move the cursor to the option to be modified, and
+
+” and input required coordinate values, after that press“
+
+”key to complete the
+
+changes.
+
+Set special location, press“
+
+Press“
+
+”or“
+
+”key, it will access to the stop position list as below:
+
+”key to move to required option and then press“
+
+”key to save the change,
+
+return to previous menu.
+9.
+
+G Code Setup
+
+Set the reading configuration of special codes in G code file. To make changes according to the actual need.
+
+Setting mode：Press“
+
+”or“
+
+”key to move to G code attribute option that needs to be modified,
+
+40
+
+Beijing RichAuto S&T Corp., Ltd
+
+press“
+
+”key and then select the required attribute, and then press“
+
+”key again to save the
+
+change, return to the previous menu.
+10. Pro Attribute
+Set special processing attribute, to make changes according to the actual needs.
+
+Setting mode：Press“
+
+modified, press “
+
+”or“
+
+” key to move to processing attribute option that needs to be
+
+” key and then select the required attribute, and then press “
+
+” key again to
+
+save the change, return to the previous menu.
+11. Work Array
+Array work parameters including column count、Row count、Column space、Row space、Interval（Time unit：
+ms） and Array deepen
+Column space：File spacing of X direction
+Row space：File spacing of Y direction
+Total Processing times= column count* Row count
+Interval：System default 0，means not wait.
+Array deepen：User can input a value of the deepness if user wants to gradually deepen the machining in each
+array. Unit: mm.
+During array work, the operator has to replace a new work material when completed each array work. In that way,
+the operator needs a limitless interval value. Set the interval into a negative value. After the first array completed, the
+screen prompts “Waiting for the next array processing……” Press any key to start the next array processing at this time,
+if none key is pressed down, the system will keep waiting.
+Press “
+
+” key to start “Array work” function.
+
+41
+
+Beijing RichAuto S&T Corp., Ltd
+
+Setting mode：Enter “Array Work” menu, the screen shows:
+
+Press“
+
+”or“
+
+” key to move to the option that needs to be modified, and then press “
+
+key and input new value, after that， press“
+
+press“
+
+”
+
+”to save the change, modify the remaining options and
+
+”to save all the changes, return to “Array Work” menu.
+
+42
+
+Beijing RichAuto S&T Corp., Ltd
+
+4.2.3 System Setup
+System Setup menu structure chart
+
+1.
+
+Languages
+
+Change system language display, users can choose Chinese or English.
+2.
+
+Data Initial
+
+After data initial system parameters will restore to factory setting.
+3.
+
+Inner Format
+
+Clear the internal files. It won’t damage the system parameters.
+4.
+
+Clr Sys Cache(Clear system cache)
+
+Users need to do this after functional upgrading. After this operation, user should restart the system.
+5.
+
+Function Confi（Function Configuration）
+
+Set whether the system retains a function or not, change it according to the actual application in accordance with the
+practical application. After the operation user should restart the system.
+
+43
+
+Beijing RichAuto S&T Corp., Ltd
+
+Setting method：Press“
+
+”or“
+
+”to move to the option to be modified and press“
+
+to choose new function as you want, after that, press“
+
+”key
+
+”key to complete the change, return to the
+
+previous menu.
+6.
+
+Probation PW (Probation Password）
+
+The controller has a initial 20-digit password, user should offer the 20-digit initial password and required
+probation time(Calculate according to processing time, unit: Hour), then we will offer new 20 digits password with limit
+time to the user.
+
+Setting method: Press“
+
+”key and enter “Probation PW”, the screen shows:
+
+Initial password
+
+Input new password directly and then press“
+7.
+
+”key.
+
+Probation Setup
+
+Users could set 3 class of probation password by themselves in the menu.
+44
+
+Beijing RichAuto S&T Corp., Ltd
+
+8.
+
+Backup PW(Backup password)
+
+To prevent the system parameter be backup in disorder condition, or the correct parameters be covered by
+disoperation.
+
+Setting method: Press“
+
+”key to enter into “Backup PW”, the screen displays:
+
+Input a new password directly and then press“
+
+”key to save.
+
+If the password should be canceled, just don’t input any digit when it prompts “Input new password” and
+
+press“
+
+9.
+
+”key to save.
+
+Backup Data
+“Backup Data” means to backup the system parameters to U flash disk or internal space of the controller.
+
+“Inner Format” operation doesn’t affect it. Its file format is: data.bak.
+
+Setting：Press “
+
+” to enter “Backup Data”，screen shows:
+
+Press“
+
+” to move cursor and select the backup target, and then press “
+
+”or“
+
+confirm.
+10. Restore Data
+Restore the “data.bak” file from U disk or inner to the control system.
+
+Setting：Press “
+
+”to enter into “Restore Data” menu, the screen shows,
+
+45
+
+”key to
+
+Beijing RichAuto S&T Corp., Ltd
+
+Press “
+
+”or“
+
+”key to move cursor and select the restore source, and then press “
+
+”key to
+
+confirm, the data restored successfully.
+
+11. Buttons Check
+Users can check buttons are valid or not under this menu. Enter “Buttons Check”, press each button, the corresponding
+button will be highlighted on the screen. It will not be highlighted if the been pressed button is not available. To exit the
+
+“Buttons Check” by pressing“
+
+”+“
+
+”。
+
+12. TFT Test
+Enter “TFT Test”; press each button, if the screen shows pure colors means the screen is normal. If the screen missing
+color, then it should be returned back for repairing.
+
+Red
+
+Press“
+
+green
+
+blue
+
+black
+
+”key to exit “TFT Test”.
+
+13. Internet Para Setup
+
+14. Internet Connect Setup
+
+46
+
+white
+
+Beijing RichAuto S&T Corp., Ltd
+
+15. Sytem Upgrade
+If added new functions, we will offer upgrade file which extension name is ******.PKG format (File name is
+rz-xxxx or q13-xxxx). User could update the system through U disk, for more details please see PS1. System
+updating doesn’t remove the controller original parameters.
+Upgrade package format sample:
+Sample:
+
+4.2.4 Operate File
+
+Operate File Menu Structure Chart
+
+1.
+
+Copy File：
+
+Copy files from U disk to inner space.
+2.
+
+Del File（Delete File）：
+
+Delete system internal files.
+3.
+
+View File：
+
+View the files and G codes of U disk or inner.
+4.
+
+Proc Info（Processing Information）：
+
+System powers on, it will statistical the times of successful processing by file name, if system powers off, the data
+will disappear.
+5.
+
+Proc Time（Check Processing Time）：
+
+Calculate processing time according to work speed, after reading G codes, the screen will display the processing
+time, different work speed corresponding to different processing time.
+47
+
+Beijing RichAuto S&T Corp., Ltd
+
+Operating mode：Press “
+
+Press“
+
+”or“
+
+” to enter “Proc Time”, the screen shows:
+
+”key and select from the options, after that, the screen shows：
+
+Press“
+
+”key to enter and select the processing file required to be calculated, and then
+
+press“
+
+”key, the screen shows:
+
+Screen will show processing time：
+
+NOTE: Please pull out the U disk correctly after copying files from the computer, to avoid the risk for the controller can’t
+recognize the U disk.
+
+1)
+
+Win7 (32 bit) system: After copying files, please press“
+
+48
+
+”, and then the display will show
+
+Beijing RichAuto S&T Corp., Ltd
+
+2)
+
+“
+
+”, choose the device to be shut down. When the display shows
+
+“
+
+” means the U disk has been removed out from computer
+
+successfully.
+
+3)
+
+Win XP system: After copying files, press“
+
+”, and then the computer screen will show
+
+“
+
+”, choose the device to be shut down. When it shows
+
+“
+
+” refers to the U disk has been removed out from computer successfully.
+
+4.2.5 Version View
+Users can view information about the system hardware and software, including：
+
+
+Update Version： eg：P1.409/rz-xxxx/q10-82
+
+
+
+Product ID eg：A0020112
+
+
+
+Soft Version eg：A1.1936
+
+
+
+Emergency Version eg：A1.1920
+
+
+
+Soft type：3/4-axis carving
+
+
+
+Hardware type：4-axis carving Support 5-inch color screen
+
+4.3 Remote control user interface (reserved)
+
+49
+
+Beijing RichAuto S&T Corp., Ltd
+
+4.4 Input output control user interface
+
+1) Guard input state：
+The stepper wiring board has 16 status indicators which are corresponding to the X01~X16 port of the wiring board
+INPUT SIGNAL terminal.
+Indicator 01 is X01-X axis HOME signal (Mechanical origin);
+Indicator 02 is X02-Y axis HOME signal;
+Indicator 03 stands for X03-Z axis HOME signal;
+Indicator 04 stands for X04-Auto tool sensor signal; Or A axis HOME sensor on 4 axis system（B58）
+Indicator 05 is X05 input signal to be defined, or tool sensor signal on 4 axis system (B58)
+The remains input indicators are definable signals.
+Input terminal debugging: Normally the lights display in green which means the signal has not been triggered; The
+lights turn to red when the input signals are triggered. However, if corresponding indicator light stays in green while the
+input signal is triggered. User should check the problem of corresponding signal sensor, circuit and the wiring board.
+2) Guard output state：
+There are 8 output ports on the stepper wiring board, while 16 output ports on the servo wiring board. Each
+output port is corresponding to the indicator light No. 01(Y01) to 16(Y16).
+Indicator 01 stands for Y01-Spindle ON/OFF;
+Indicator 02 stands for Y02-multi-step spindle speed 1;
+Indicator 03 stands for Y03-multi-step spindle speed 2;
+Indicator 04 stands for Y04-multi-step spindle speed 3;
+The remains indicator lights are to be defined.
+
+50
+
+Beijing RichAuto S&T Corp., Ltd
+
+Press“
+
+”key can change the indicator status (color). Thus, user can manually control the
+
+”、“
+
+corresponding output port signal status. Press“
+
+press“
+
+”keys to move to left or right; then
+
+”key to modify corresponding light status. E.g.: The cursor stays at 01 indicator, press“
+
+”，
+
+it turns red from green，spindle starts.
+
+4.5 Tool path user interface
+
+1.
+2.
+3.
+4.
+5.
+
+In this interface, user can preview simulation drawing, X/Y/Z/A axis machining range and the G code of the
+processing file.
+In the g code viewing, press number buttons“2”or“8” to move up or down line by line.
+Press number buttons“3”or“9”to move page by page.
+Press number buttons“4”or“6” to switch from G code head to the end.
+Press combination buttons “MODE”+ number buttons“2”or“8”to view top and bottom of the work path.
+
+6.
+7.
+
+Press combination buttons，“MODE”+ number buttons“4”or“6” to view left and right side of the work path.
+Press combination buttons，“MODE”+ number buttons“3”or“9”zoom in or out.
+
+5 Machine Operation
+5.1 Return HOME (ZRN)
+It will display “all axis home”, “Z home only”, “none axis home” after starting up the DSP handle. Determine
+according to your actual needs. Machine return home can revise the coordinate of the dsp system.
+In some cases, such as after normal power off, reboot and continue last operation, no need to go machine ZERO
+again, just choose “none axis home” to skip HOME operation. That is because system automatically saves the machine
+coordinate information before it exits normally.
+
+51
+
+Beijing RichAuto S&T Corp., Ltd
+
+5.2 Load processing file
+Before processing, generally we should import files. RichAuto system has 2 ways to import files: U disk file loading
+and inner file loading.
+1)
+
+Directly import the processing file into U disk, and then run with the U disk inserting in the controller. Press
+“
+
+”key, screen shows:
+
+Select the file you need and press“
+
+”key.
+
+2) Copy the files to handle internal storage area from U disk, and then run the inner file without U disk inserting. After
+checking the processing file code and drawing path, the screen will show the simulation image of the loaded processing
+file.
+
+5.3 Manual Operation
+Manual Operation refers to move the machine tool by pressing the direction key on the keypad. User can change
+the running speed and set the grid (step distance) in manual mode. System will enter Manual Operation state after
+returned HOME, and the screen displays:
+
+52
+
+Beijing RichAuto S&T Corp., Ltd
+
+5.3.1 Manual speed switching and adjustment
+1. Speed mode switching
+
+There are 2 speed mode-Fast/Slow speed switching. Press “
+
+” to switch the mode.
+
+E.g.: Suppose the current speed mode is “H SP”, press down“
+
+”, the screen will change to “L SP” mode.
+
+The speed mode status show on screen determines the actual manual moving speed.
+2. Speed adjusting
+Press“MENU”--“Menu function user interface”--“Auto Pro Setup”-- find “Manual Speed & Grid
+speed”--“Low Manual Speed” and “High Manual Speed”, the screen displays as below：
+
+The cursor stays at “X SLOW”, press “
+
+press“
+
+”、“
+
+”key and move to the option to be modified and then
+
+”key, the screen prompts:
+
+Enter required value, after that press“
+
+error in the inputted value, press“
+
+”key to confirm; Press“
+
+”key exit. If there is an
+
+”to delete from the last digit, then enter correct value.
+
+High speed mode setting method is the same to low speed mode.
+
+5.3.2 Manual movement modes
+To meet the requirements of manual movement in different situations, the system provides 3 manual movement
+
+modes: Continue, step, distance. User could press “
+
+” under manual mode to switch manual movement mode
+
+and view the current movement mode at the “Machine status display area” of the screen.
+1. Continue motion mode (Continuous motion mode)
+
+This model has no specific data control, user could press motion direction keys（
+53
+
+、
+
+、
+
+、
+
+Beijing RichAuto S&T Corp., Ltd
+
+、
+
+、
+
+、
+
+、
+
+）,the machine continues to move until the direction keys are
+
+loosened. The motion speed is determined by current manual speed mode.
+2. Step motion Mode
+In step mode, machine moves 1 grid every half second. The grid distance is determined by the current speed mode.
+H SP moves 0.5mm/step, L SP move 0.1mm/step.
+Step mode is suitable for fine adjusting the tool bit or position of the mechanical coordinate.
+3. Distance motion mode (Fixed distance motion mode)
+In Distance mode, the movement depends on the distance value you’ve set. The machine will move fixed
+
+distance(A axis moves by angle)when user presses the direction keys（
+
+、
+
+、
+
+Modification method: Press“
+
+、
+
+、
+
+、
+
+、
+
+、
+
+）.
+
+”key and switch to Distance motion mode, the screen shows as below:
+
+Enter in the required distance value and press“
+
+”key to confirm.
+
+Note: The distance mode is not affected by the step mode grid setting, it means that the machine moves
+accurately at the set distance (A axis moves by angel), it won’t move to the grid point. If the distance value (A axis is
+
+angle value) needs to be change, just press“
+
+”key three times to enter into the distance mode again, then
+
+input new value(A axis is angle).
+
+54
+
+Beijing RichAuto S&T Corp., Ltd
+
+5.4 Auto processing operation
+Auto processing refers to the system processes the file in U disk or inner storage space according to the
+instructions. It also called “file processing”. Before auto processing, user should set the machine tool parameters and all
+of the system parameters correctly.
+Auto processing steps refer to the following content.
+
+5.4.1 Set work origin
+The origin point of X, Y and Z axis in processing file is work origin. Before processing, we should associate that
+position with the actual location, operate as below:
+Manually move X, Y and Z to the position where will start to process the file on material. Afterwards, press
+
+“
+
+” to set X and Y work origin position. Do the same way to Z and A axis, press“
+
+”key so that the
+
+system saves the Z and C work origin position.
+
+If use automatic tool setter, no need to press “
+
+”key. Only press“
+
+”key the system will remember
+
+the work origin of the Z axis.
+
+5.4.2 Load processing file
+After determined the work origin, press“
+
+Select required file and then press“
+
+”key, the screen shows:
+
+”key.
+
+5.4.3 Set Auto processing parameters
+
+1)
+
+After loading the processing file, press“
+
+”key, prompts a list of auto processing parameters settings：
+
+3)
+
+2)
+User can modify the work parameters, including work speed, fast speed, Speed scale, fall down scale and HW
+(handwheel guide).
+
+55
+
+Beijing RichAuto S&T Corp., Ltd
+
+4)
+
+Modification method: Press“
+
+“
+
+”、“
+
+”key and input new value, and then press“
+
+have been modified, press“
+
+5)
+
+” Key to move the cursor to different items, press
+
+”key to confirm the changes. After all options
+
+”key, and wait for the spindle start：
+
+The system starts to process after the spindle start rotating. During machining, the machining status can be viewed
+
+at the machine status area， which contains work speed, work time, file line No., G codes etc. Press“
+
+”key
+
+to switch the information in machine status display area.
+
+5.5 Operations during processing
+5.5.1 Speed ratio & spindle state adjusting
+1)
+
+Speed ratio adjustment
+
+During processing, press “
+
+each press on “
+
+”/“
+
+”、“
+
+” adjust the speed ratio. The speed ratio increase/decrease 0.1
+
+”key.
+
+Speed scale (speed ratio): max. is 1.0; min. is 0.1, speed values are also change accordingly except for the time.
+Current processing speed = work speed * speed scale
+2)
+
+Spindle state Adjustment
+
+If user has set multi step speed function ， the multi-step speed can be adjusted during processing.
+
+Press“
+
+”、“
+
+”key to adjust spindle speed from S1 to S8. Each press on“
+
+increases 1 stage until it reaches S8; Each press on “
+
+”key, the spindle speed
+
+”key, the spindle speed descends 1 level until it reaches S1.
+
+5.5.2 Pause & position adjustment
+56
+
+Beijing RichAuto S&T Corp., Ltd
+
+Pressing “
+
+”key to pause processing. The top right corner of the screen will change from “MAUN” to
+
+“PAUS” and machine suspends processing except for the rotating of spindle. Shown below:
+
+At this moment, the user is allowed to adjust the position of X, Y Z and A axis. The system default manual motion
+mode is STEP. So that user can fine adjust each axis distance（A axis moves by angle）. Machine moves one low or high
+speed grid distance every step.
+
+When the adjustment is finished, press “
+
+”again, screen shows:
+
+The system asks the operator to confirm whether to save the modified position or not. Press
+
+“
+
+”/“
+
+”key the system will start processing at modified position; Press“
+
+system will start processing at suspend position (before modifying).
+
+5.5.3 Breakpoint processing &power failure recovery
+1. Breakpoint processing
+57
+
+”key the
+
+Beijing RichAuto S&T Corp., Ltd
+
+If user wants to stop machining during processing, press“
+
+”key, the screen shows as below:
+
+If the stop position has to be saved, user should press “
+
+”key, the screen displays break list (From
+
+breakpoint 1 to 8).
+
+Press“
+
+”、“
+
+” move the cursor and select, and then press “
+
+” key to save, system
+
+automatically move to work origin. If the user wants to continue processing from the breakpoint, could press the
+
+combination keys “
+
+“
+
++ corresponding number” keys. First, keep pressing the main function key
+
+”and then press corresponding number key, afterwards, release them at the same time, the system will
+
+resume processing from the relative breakpoint.
+
+E.g.: To restore from breakpoint 7, press“
+
+and press“
+
+”+“
+
+”keys，press and hold the“
+
+”key
+
+”key，then release them together，the system will be processing form breakpoint 7. If the user
+
+wants to process from the other g code line where is ahead the breakpoint, shall press“
+
+line no. and then press“
+
+”and enter new
+
+”key, the system will start to process at the new line. The system must have an
+
+action of returning HOME (mechanical origin) during the period of saving breakpoint and before machining.
+2. Power off protection
+58
+
+Beijing RichAuto S&T Corp., Ltd
+
+When there is a sudden power failure during processing, system will save current coordinate and parameters and
+continue the processing when the power is electrify again. After power on, system must return HOME at once. Then
+the screen will prompt:
+Last power off during working,
+because of inertia the machine
+position may be error, do you want to
+restore coordinate? Recommended go
+HOME to restore.
+
+Press“
+
+”key to continue the unfinished processing, the screen will show stop line, shown as below:
+
+Start Line No. Of Power Failure Recover
+
+The line number can be chosen， press“
+
+”， the screen pops up:
+
+Enter the line number to be backwards from current position and then press
+
+“
+
+”, the operate
+
+method is the same to what has mentioned in breakpoint processing. G code cursor will jump to the new line location:
+
+59
+
+Beijing RichAuto S&T Corp., Ltd
+
+Press“
+
+”key the system will start processing from the new line.
+
+5.6 Advanced Work
+The development of Advanced work is to meet the special requirements in the operation, it mainly includes:
+Array work, Resume work (breakpoint processing), Mirror Work, Tool changing (manual change tool bit), Part work,
+Calculate bound, Auto Center, Mill plane, Calculate work time, Find break No., Auto Resize, Scale work and Step work.
+Pressing the shortcut key “
+
+1.
+
+”to access advanced Work list, the screen as shown below:
+
+Array work
+
+Operating steps as below:
+
+1)
+
+Press“
+
+then press “
+
+2)
+
+Press“
+
+”、“
+
+” to move cursor to the Array work option, press “
+
+”，“
+
+” to enter, and
+
+” again to select different file lists;
+
+” to enter file list, then press“
+
+”、“
+
+” to move the cursor and choose
+
+target file;
+3)
+
+Set processing parameters, revise the relative parameters of Array Work here, or go to “MENU”--“AUTO PRO
+SETUP”, choose “Work Array” and modify the array parameters. The rest steps are similar to the normal
+processing. After that, system starts the array work processing according to the user’s settings.
+
+4)
+
+During array work, press “
+
+” view real-time row number, column number and other processing
+
+information.
+Note: If user wants to manual control in array work, just change the setting of “Interval (unit:ms)”into a
+negative number.
+60
+
+Beijing RichAuto S&T Corp., Ltd
+
+2.
+
+Resume work (breakpoint processing)
+
+Operation procedure is as follows：
+
+Press“
+
+Press“
+
+”、“
+
+” to move cursor on resume work, press“
+
+” the system recover from the corresponding break point. However, if user don’t want to
+
+recover from the fixed break point in the list, should press“
+
+Input new line No. and then press“
+
+Press“
+3.
+
+” to enter the breakpoint list,
+
+”， the system prompts：
+
+”key, the G code cursor will jump to the new line:
+
+”key the system will start to process from the new line.
+
+(Manual)Tool changing
+
+It means manually loading or loosen the tool bit at a certain position of the machine tool. Press
+
+61
+
+Beijing RichAuto S&T Corp., Ltd
+
+“
+
+”key to enter into the setting:
+
+After new tool bit is replaced press“
+4.
+
+” the machine will go back to workpiece origin.
+
+Part work
+
+Park work means user can select a start line and stop line from G code file, and realize machining a part of G codes
+from the processing file. The operate steps are as follows：
+
+1)
+
+Press“
+
+”key to enter the setting:
+
+Input start line number
+
+2)
+
+Press“
+
+”key，prompts：
+
+Input number
+The line number of the code:68
+
+3)
+
+Enter a new line number, press “
+
+”to confirm, the cursor in the G codes will jump to the new
+
+line:
+
+62
+
+Beijing RichAuto S&T Corp., Ltd
+
+Input start line number
+
+4)
+
+Press“
+
+”again to go to the end line input operation, prompts:
+
+Input end line number
+
+5)
+
+Press“
+
+“
+
+”the cursor will automatically moves to the end line, user can modify by pressing
+
+”key, input new end line number:
+
+63
+
+Beijing RichAuto S&T Corp., Ltd
+
+Input end line number
+
+Press“
+
+”key to confirm, start processing.
+
+6)
+
+Setting up processing parameters, and the following steps are similar to normal processing.
+
+5.
+
+Calculate bound
+
+Calculate bound means user can check the size of processing file, thereby to avoid unnecessary waste of
+materials and machining errors. The steps are as below：
+
+1)
+
+Press“
+
+”、“
+
+” to move the cursor to “calculate bound”, press“
+
+Press“
+
+”、“
+
+”again to move and select from different file lists;
+
+2)
+
+Press“
+
+”to enter a file list, and press“
+
+3)
+
+Press“
+
+”key, the system will calculate the file dimension after file reviewing:
+64
+
+”、“
+
+”to access in：
+
+”to move to the target file:
+
+Beijing RichAuto S&T Corp., Ltd
+
+6.
+
+Mill plane
+
+Including 2 types: Scanning type milling and Encircle type milling.
+
+The specific procedures are as follows:
+1、Scan milling
+
+1)
+
+Press“
+
+2)
+
+Press“
+
+”、“
+
+”to move the cursor and choose a milling type.
+
+”to enter into the milling plane parameters setting, including Scan type, scan width, scan
+
+height, tool diameter, tool depth, Z step(Z feed amount), T Ratio(Tool feed ratio).
+
+3)
+
+Press“
+
+press“
+
+after that press“
+
+”、“
+
+” to move the cursor and select the item to be modified,
+
+”choose milling type(Horizontal milling/ lengthways milling) and modify specific values,
+
+”to save the changes.
+65
+
+Beijing RichAuto S&T Corp., Ltd
+
+2、Encircle milling
+
+1)
+
+Press“
+
+2)
+
+Press“
+
+”、“
+
+” to move cursor to choose the mill type；
+
+”to enter the milling plane settings， containing scan type, scan width, scan height, tool
+
+diameter, scan depth, Z step(Z axis feed amount), T Ratio(Tool feed ratio of Z axis) .
+
+3)
+
+Press“
+
+”、“
+
+”to move and modify the settings, and press“
+
+”to select a scanning
+
+type（Anticlockwise/ clockwise） and modify the specific values, and then press“
+
+”to save the
+
+changes.
+7.
+
+Calculate work time
+
+Calculate the total machining time according to the work speed.
+
+1)
+
+Press“
+
+”、“
+
+”to move the cursor to “calculate work time”option, press “
+
+”、“
+
+”to select the file source,press“
+
+enter into:
+
+2)
+
+Press“
+
+66
+
+”to enter into the file list：
+
+”key to
+
+Beijing RichAuto S&T Corp., Ltd
+
+3)
+
+Press“
+
+”、“
+
+”to move and select file, press“
+
+”to confirm, after system calculating:
+
+The screen will show the file total work time（different work speed correspond to different processing time）:
+
+8.
+
+Find break No.
+
+During processing, if accidentally tool broken but user hasn’t saved the break point, stop working and replace the
+tool. After that, user can manually move X, Y axes to the nearest point where the cutter was broken (recommend to
+
+move a little further), press combination keys “
+
+press“
+
+”、“
+
+”+“
+
+”to start advanced work fuction, and then
+
+” move cursor to “Find break no.”, then press “
+
+” to enter in. After guide and
+
+reading code, the system prompts:
+
+Press“
+
+” to start processing, press“
+
+” key, the screen just show the current position line
+
+number.
+Note: When using the “fine break no.” function, the current work coordinate must be consistent with the work
+coordinate of the breakpoint.
+
+9.
+
+Auto resize：
+
+1)
+
+Press “
+
+” or “
+
+” to move cursor to “Auto resize”，and then press “
+67
+
+”to enter.
+
+Beijing RichAuto S&T Corp., Ltd
+
+2)
+
+Press “
+
+” or “
+
+” move to the option witch needs to modified, then press “
+
+input new value, press “
+
+3)
+
+”to
+
+” save the modification.
+
+After modified all the options, press“
+
+” to start processing.
+
+Circle size: 200mm * 200mm
+
+10mm（Y Positive
+gap）
+
+10mm（Y Negative
+gap）
+Work origin
+10mm（X Negative gap）
+
+10mm（X Positive gap）
+
+X、Y axis origin：Offset value of the new workpiece origin which is relative to the original workpiece origin.
+X、Y axis size: New processing file size.
+X negative gaps: See the bottom mark, in X direction, processing origin is moved back for 10mm.
+X positive gaps: See the bottom mark, in X direction, processing origin is moved ahead for 10mm.
+Y negative gaps: See the bottom mark, in X direction, processing origin is moved back for 10mm.
+Y positive gaps: See the bottom mark, in X direction, processing origin is moved ahead for 10mm.
+
+10. Scale Work
+If user needs different sizes processing file, could select “scale work” , input the zoom scale and then start
+68
+
+Beijing RichAuto S&T Corp., Ltd
+
+processing. Press “
+
+”to enter:
+
+Operate steps：
+
+1)
+
+Press “
+
+” or “
+
+” to move cursor to “scale work”, then press “
+
+2)
+
+Press “
+
+” or “
+
+press“
+
+” to save the change.
+
+” to highlight “X scale”, press“
+
+When finished the modifications press “
+
+”to enter：
+
+”to input a new value, then
+
+” to start processing.
+
+6 B55 multi heads with cylinders motion control system
+introduction
+6.1 B55 combination keys
+B55 combination keys are compatible with B51 and have 2 more combination function keys than
+No.
+
+Combination Keys
+
+1
+
+“
+
+Function
+Switch spindle manually
+
+”
+
+2
+
+Calculate the tool bit offset
+“
+
+”+ “
+
+”
+
+6.2 Multi tool count
+Input the number of tools in this option.
+69
+
+Beijing RichAuto S&T Corp., Ltd
+
+6.3 Multi heads offset setting
+6.3.1 X and Y axis direction offset
+Input value directly by measuring
+B55 offset setting is a bit different from A55. Here we take 2 cutters as an example to explain and surely 4 cutters
+setting method is the same as 2 cutters.
+In A55, no need to set the offset value of tool 1 , because it takes the position of tool 1 as reference, set tool offset
+from tool 2.
+B55 changes the XY offset setting method. The X and Y axis offset of the spindle 1 must be set as 0 and can't be
+modified. Z axis of the spindle can be set according to the length and height of the tool. For the Z axis offset value, the
+system saves the values of each Z axis mechanical coordinate.
+
+Take X axis offset as example. Load all spindles with center pointed knife, and then double press“
+
+”key to
+
+enter into Input Output port control interface, as shown below,
+
+Move the cursor to the green circle 05
+
+changes to red
+
+，and then press“
+
+”key to enable Y5, the green circle
+
+，the control relay of spindle No.1 cylinder enabled, the spindle No. 1 moves down towards the
+
+machine table. After that, press“
+
+surface and mark a point on it, press“
+
+”+“
+
+”keys to move and make Z axis tool nose just touch the part
+
+”key to clear the X and Y coordinates.
+70
+
+Beijing RichAuto S&T Corp., Ltd
+
+Switching to spindle 2, before that, please manually lift up move spindle 1 and also move the cursor to
+
+and then press
+
+button to enable Y6，it changes in red
+
+Y6,
+
+. Move the tool nose to the previous
+
+position where tool 1 has marked a dot. If the X axis display 200.000, means the distance between tool 1 and tool 2 is
+200mm, and the X axis offset input value should be set as -200.000
+
+6.3.2 Z axis direction offset
+Stressed: First, lift the Z axis up to the highest position (the Z- axis HOME position) before manual tool
+replacement. And then replace the tool through the cylinder action, and keep it in place. Note that the mechanical
+coordinate may change after the manual tool change, this is normal. If it moves to the mechanical coordinate which
+was located at previous position at this time, you will find the tip of the new tool bit can completely coincides with
+previous one.
+
+1) Machine without tool sensor
+First, change the tool setting type as “Manual” under SYSTEM SETUP-Function Config-Toolset type；Second,
+
+double press“
+
+” button, and enable Y5 signal to change to tool 1 under the I/O port control interface. Press
+
+“
+
+”to move Z axis tool nose touch the workpiece surface for measuring Z axis offset value of tool 1,
+
+”+“
+
+and the mechanical coordinate value of tool 1 at this moment is its Z offset value. Input the measured value to option
+
+of spindle 2 Z axis offset by pressing shortcut keys “
+
+”+“
+
+”.
+
+Measuring method of spindle 2 or the others spindles are the same to spindle 1 which is switched by I/O port
+and then measured manually.
+
+2) Machine installed tool sensor
+The system default tool setting type is AUTO, user could find the setting under the menu system setup –function
+conf- Toolset type. In this setting， it allows user to select different toolset type separately on different tools. But the
+A55 couldn’t, user have to reset Z axis offset of all the tools if one of the tools to be replaced or changed. For B55,
+just need to switch to the required tool No. when user wants to reset its Z offset value. And then move the tool bit to
+
+71
+
+Beijing RichAuto S&T Corp., Ltd
+
+a measuring surface (Note: All tools must use the same measuring surface), press “
+
+”+“
+
+”to set
+
+the point as the current tool Z offset. Generally speaking, the X and Y offset value of every spindle is the same, so we
+recommend the first method which is input value manually; But Z axis offset of each spindle cannot keep the same all
+the time because of the tool usually changes or replaces during actual operations, recommend to the second way.
+
+6.4 Cylinder Delay Time
+Cylinder delay: Unit:ms(under Machine Setup)
+The time that waiting for the complete of cylinder raise the spindle up or drop it down.
+
+6.5 Programming Example
+T1（Tool 1 switching signal）
+M03(Spindle 1 FWD ON)
+G00 X20 Y20 Z0
+G01 X20 Y20 Z-2
+G01 X120 Y20 Z-2
+G01 X120 Y120 Z-2
+G01 X20 Y120 Z-2
+G01 X20 Y20 Z-2
+GOO Z20
+G00 X20 Y20
+M05（Spindle 1 OFF）
+
+T2（Tool 2 switching signal）
+M03(Spindle 2 FWD ON)
+G00 X2 Y2 Z0
+G01 X2 Y2 Z-2
+G01 X12 Y2 Z-2
+G01 X12 Y12 Z-2
+G01 X2 Y12 Z-2
+G01 X2 Y2 Z-2
+GOO Z20
+G00 X2 Y2
+M05（Spindle 2 OFF）
+
+Programming principle of tool 3 and 4 are the same; the last line of the program can write M30- Go back to the start
+point and end the main program instruction.
+
+72
+
+Beijing RichAuto S&T Corp., Ltd
+
+7 B57 Automatic Tool Change Motion Control System
+7.1 Tool Change work mode
+The tool change system uses standard G code instruction to convert T instruction to tool change instruction, so
+that the system executes tool change action while it reads T instruction.
+When running machining file with T instruction, user should set the "Read ATC" under “Auto Pro Setup”-- "G code
+setup"— “G code read T” menu in advance.
+
+7.2 B57 ATC System construction
+
+Handheld Controller
+
+HDMI Data Cable
+
+16 I/8 O wiring board
+
+16 I/16 O wiring board
+73
+
+Beijing RichAuto S&T Corp., Ltd
+
+7.3 IO port definition:
+Input No.
+X1
+X2
+X3
+X4
+X5
+X6
+
+Input ports Definition
+X Home Signal
+Y Home Signal
+Z Home Signal
+Auto Tool Setting
+Inverter alarm Signal
+
+Output No.
+Y1
+Y2
+Y3
+Y4
+Y5
+Y6
+
+X axis servo driver alarm
+
+X7
+X8
+
+Output ports Definition
+Spindle Forward
+Definable
+Definable
+Definable
+Definable
+Dust hood open/close output
+signal（logic low）
+
+Y7
+Y8
+
+Y axis servo driver alarm
+
+Z axis servo driver alarm
+
+definable
+release/accept tool holder
+signal output signal
+（logic low）
+
+X9
+
+Y9
+
+Pump pressure sensor signal
+
+definable
+
+（logic low）
+
+X 10
+
+Y10
+
+Manually release/accept tool
+
+definable
+
+holder signal（logic low）
+
+X 11
+
+Y11
+
+Cylinder in place signal
+
+definable
+
+（logic low）
+
+X 12
+
+Y12
+
+Waiting spindle off signal
+
+definable
+
+（logic low）
+
+X 13
+
+Y13
+
+Tool released signal
+
+definable
+
+（logic low）
+
+X 14
+
+Y14
+
+Tool accepted signal
+
+definable
+
+（logic low）
+
+X 15
+
+Y15
+
+Dusthood open signal
+
+definable
+
+（logic low）
+
+X 16
+
+Y16
+
+Spindle with or without tool
+signal
+
+definable
+
+（logic low）
+
+COM
+24V
+
+COM
+24V
+
+74
+
+Beijing RichAuto S&T Corp., Ltd
+
+7.4 Tool Change Function Keys
+
+“
+
+“
+
+Manual tool switch
+
+”
+
+”+“
+
+Calculate tool Z direction offset
+”
+
+7.5 ATC MENU
+1) Tool Count
+To be used to input the total number of spindle tools.
+2) ATC position
+Set tool change position of each tool.
+3) C.A.D Position
+To set the tool sensor location; Two calibration methods can be selected-In place/In Position.
+4) Pickup Height (Custom variables)
+Variable 1(Custom 1): During tool changing, the retract amount along X/Y direction from the tool clip after the spindle
+captured a tool.
+Variable 2(Custom 2): During tool changing, set the spindle goes up amount along Z direction when switching from
+one tool to the other.
+User only need to change variable 1 and 2, the other variables in the system setting are no need to change.
+*All above 4 options can be found in “Machine Setup” menu.
+
+7.6 Manual tool loading operation
+1)
+
+In the system manual control user interface, press“
+
+”button and choose “Input output control user
+
+interface” to enter in；
+2)
+3)
+
+Move cursor to highlight Y6, press “RUN/PUASE/DELETE” button, the Y6 changes its light from green to red,
+the solenoid valve opens the dust hood.
+Move the cursor and highlight Y8, and press “Run” button, Y8 green light changes to red, spindle solenoid
+valve turns on and releases the spindle pull claw which is going to grab a tool，manually put a taper tool
+holder with bit into the spindle chamber，afterwards change Y8 from red to green， to close the spindle
+solenoid valve， the pull claw capture the pull stud of tool holder， tool loading completed.
+
+7.7 Set automatic tool change position
+Entering into “ATC Setup” menu, input total number of tools in “Tool Count”, then go back and select “ATC Position”, the
+75
+
+Beijing RichAuto S&T Corp., Ltd
+
+system will display as below,
+
+“ATC position 1” is highlighted, press“
+
+position manually or press “
+
+” ， system prompts a dialog box, press“
+
+”to move to ATC
+
+”to set the ATC position by input its coordinate value;
+
+7.7.1 Set ATC position by moving machine manually
+1)
+2)
+3)
+4)
+
+5)
+
+To load a tool into the spindle manually, and make sure there is no tool holders in the tool clips.
+Input the total amount of tools;
+Go to “Tool change position”, and then select “ATC position 1”, press “OK”-a dialog box prompts, read it and
+press “OK” which means to set tool change position by moving the spindle to corresponding position manually;
+Moving the spindle over and nearest the position of the tool clip 1, after that, slowly lower Z axis to a proper
+position in Y- direction of the tool clip 1, move the tool holder along Y axis/X axis into the tool clip 1, until it
+seats into the tool clip properly, press ”OK” to save current coordinate value of ATC position 1.
+Retreat the tool holder and remove it from the tool clip along Y or X axis, move up Z axis， then go to tool clip
+2..3…8, set the rest tool change positions one by one in the same way until completed all the tool change
+positions’ setting.
+
+7.7.2 Set ATC Position By Inputting Coordinates Values
+1)
+2)
+
+Entering in “Tool count”, input tools total amount;
+Go to “Tool change position” , select “ATC position 1”,system pop up a dialog box, read it and press “CANCEL” ,
+afterwards input the tool change position(coordinate value of each axis).
+3) Input X Y and Z axis coordinate value of ATC position 1, then press “OK” to save;
+4) Set the rest ATC positions one by one in the same way until all of the ATC positions have been set.
+*Recommendation: When the tool change position is set for the first time, it is recommended the method of 7.7.1
+and record the X, Y, Z three-axis coordinate values of each tool, so that you can input those values straightly the next
+time.
+
+7.8 Manual Tool Switching
+On the keypad of B57 controller, there is a shortcut function key“
+switching. After pressing it, the system will prompt tool switch list as shown below,
+76
+
+”as a command button for tool
+
+Beijing RichAuto S&T Corp., Ltd
+
+Move the cursor to desired position and press “OK”, the system will automatic release the current tool and accept
+the new tool which is selected.
+Tool switch process：
+
+Pressing“
+
+” button，enter into the tool switch list interface, as soon as you selected the system will
+
+perform the following actions:
+Detecting input port X16 status and determines whether the current spindle has tool. If X16 signal status is ↓
+indicates it doesn't have a tool in the spindle, so that the system can execute tool switch action immediately; If X16
+status is ↑ refers to there is a tool in the spindle, the system will determine whether the tool is the target tool which is
+going to be switched to, if it is, the system displays the tool has been in place; if it isn't, the system will automatically
+release current tool and then accept the desired tool.
+
+7.8.1 Tool loading procedure:
+Detecting the status of input port X16, if it is ↓ means there is no tool in the spindle currently. Invert Y6 to ↑ for
+turning on the electromagnetic gas valve of the dust hood opens, get the time delayed until system receives the X15
+signal status is ↑（turned on）, then go to the next step. (If X15 status was ↓, the system would display: dust cover is
+not in place. Then system would quit the tool changing action automatically.)
+Move X and Y axis to the tool change position, invert Y14 tool release/accept output signal to ↑ (turns on) to open
+the pull claw inside the spindle, lowers Z axis over the ATC position and start to accept the tool; turns of Y14 ↓ to close
+the pull claw inside of the spindle, and capture the tool holder, locks pull stud tightly. Detecting input signal status of
+X14, if it is ↑means tool gripping succeeded, moves spindle to the tool retraction place to pull out the tool from the
+tool clip, move up Z axis to safe height. (If X14 status was↓, means failed to accept the tool, the system would get the
+spindle pull claw open, and would move up Z axis to the safe height, display: There is an error during accepting tool.
+Then the system would quit tool change action.)
+Inverting Y6 status to ↓, turns of the dust hood, moves X,Y and Z axis to to the initial position, tool changing
+complete.
+
+7.8.2 Tool unloading procedure
+Another case during tool switching: When the spindle is equipped with a tool, first, system determines whether the
+current tool is the desired one, if it is, the system will display: Tool has been loaded and quit tool switching action; if it
+isn’t, the system should unload the current tool and then loading the target tool, thus, the system will execute the
+actions as shown below:
+a). Turn on X15 input signal(↑) to open the dust hood, after time extending detecting, received X15 ↑(On) signal,
+continue performing the next action.(If system received signal of X15 was↓, it would display: The dust hood is not in
+77
+
+Beijing RichAuto S&T Corp., Ltd
+
+place. Then the system would quit the action)
+b). Move X and Y axis to the tool retract amount position, lower Z axis and pull the tool holder into the tool clip; Turns
+on output signal Y14 ↑(release/accept tool signal),to open the spindle pull claw, lift up Z axis to the safe height.
+Detecting whether the X13 input signal status is↑(On), if it is, means the tool unloading succeed, so that system
+executes the procedure of ‘A’ then.
+
+7.9 Set tool bit Z direction offset
+System uses combination keys “
+
+”+“
+
+” to calculate tool Z direction offset value.
+
+After ATC position settings, user should set Z offset of each tool bit. The “
+
+”+“
+
+” is used to calculate Z
+
+offset to each bit. For the tool switching and tool setting needs user’s manual operation.
+
+1) Switching to tool 1, press “
+
+”+“
+
+” to start auto tool calibration, tool 1 moves over the center of tool
+
+touch off plate, and slowly lowers Z axis until the tool bit connects with the tool sensor, afterwards lifts up Z axis.
+
+2) Press “
+
+” switch to tool 2, press “
+
+”+“
+
+”for calculating Z offset of tool 2.
+
+3) Switch and calculate one by one until complete all of the Z offset settings.
+4) After that, if any tool in the tool clip replaced, only need to set Z offset of corresponding tool bit independently. If
+there is no bit replaced, no need to set Z offset again.
+*Remarks：
+
+The different between“
+
+“
+
+”+“
+
+”combination keys and the single key“
+
+” as shown below:
+
+”is the implementation of Z axis workpiece zero calculation, used to set Z aixs workpiece origin.
+
+However, “
+
+”+“
+
+” is to calculate Z offset and used to compare the lengths of different tool bits.
+
+7.10 Machine automatic tool setting
+1)
+
+First, go to“
+
+“
+
+Machine Setup”- “Tool Setup”-“C.A.D position”, press “
+
+” and then press “
+
+” to select a tool setting type as you need (In Place or In Position), and then press “
+78
+
+” or
+
+” to save
+
+Beijing RichAuto S&T Corp., Ltd
+
+the change.
+
+2)
+
+Press “
+
+”to enter into “C.A.D Pickup”, input a value of the tool lift up distance after automatic tool
+
+setting (system default value is 60mm).
+
+3)
+
+Press “
+
+”to go into “C.A.D Thickness”, and then input the actual thickness of the automatic tool setting
+
+device. It is better to reboot the system after modification of the automatic tool setting instrument parameters.
+Afterwards, you can go on automatic tool setting operation.
+
+8 B58 Four Axis Motion Control System
+B58 common used combination keys are the same to B51, and the forth axis manual movement control buttons
+
+are “
+
+”and“
+
+”. Work origin setting button is “
+
+”, after pressing it, the system will ask you to
+
+select Z or C axis go to work origin.
+Most of Z axis work origin of 4 axis tool paths are in the center of the part(material), but the bit cannot plunge into
+material when setting Z work origin，thus the system offers “WorkOrg Offset” setting. After user set Z axis work origin
+offset value, the system will add the offset value automatically when setting Z work origin.
+*For instance, Z work origin offset is -20mm, the Z axis coordinate value will display 20 after set Z work
+origin.[0-(-20)=20].
+
+The rotation axis can be represented by alphabet A, B, or C. The system reads the alphabets to realize rotational
+movement.
+The rotation angle is calculated in absolute coordinates,
+E.g.1:
+X10 Y10 Z10 A 10
+X20 Y20 Z20 A 20
+The rotation axis rotates 10 degrees in positive direction when the second line is executed;
+E.g.2:
+X10 Y10 Z10 A 10
+79
+
+Beijing RichAuto S&T Corp., Ltd
+
+X20 Y20 Z20 A 10
+The rotary axis doesn’t move when the second line is executed.
+
+9 P.S.1: System update
+During using, the dsp system can be updated when the company-RichAuto offers new update of the software,
+Copy the upgrade package into U flash disk, then insert the U disk on dsp handle. The upgrade firmware format is
+“ **.PKG”, and display as “rz-xxxx” or “qxx-xx” on the screen. Here, ‘*’ and ‘x’ refer to a number. Operation as follow,
+Way 1:
+
+1)
+
+Press “
+
+“
+
+2)
+
+Press“
+
+3)
+
+Press“
+
+” and select “Menu Function User Interface”, press “
+
+” to move up or down, find “System Setup” and press “
+
+” or “
+
+”to select “System Upgrade” and press“
+
+” to enter in, press “
+
+” or
+
+” to access.
+
+”, the screen displays as below,
+
+” to enter into “U disk File”, select corresponding upgrade file and press “
+
+”button,
+
+then the system will automatically complete the upgrade.
+4)
+
+Afterwards, reboot the controller. User can also choose “Clear System Cache” after restarting the controller.
+
+Way 2:
+1)
+
+Insert the U disk with update software package on the controller.
+
+2)
+
+Press combination keys“
+
+”+“
+
+” the screen shows:
+
+80
+
+Beijing RichAuto S&T Corp., Ltd
+
+3)
+
+Do the same as step 3 and 4 mentioned in the “Way 1”.
+
+10
+
+P.S.2. Common troubleshooting
+
+10.1 Solution for handle screen prompts problems
+1. After powered on the “Screen flicker or automatically restart”
+Situation analysis and solution：
+1)
+
+Switching mode power supply is insufficient. Check power supply if there are problems, and change high-quality
+power supply to solve the problems.
+
+2)
+
+The local power grid unstable. Check local grid voltage stability or use the regulator filter device.
+
+3)
+
+The power chip of the handle is ageing. This phenomenon also appears when the handle is powered through the
+USB cable to the computer. Please return back the handle to our company.
+
+4)
+
+Temporary solution. Using standard 5V mobile phone charger, supply power through the USB cable to handle.
+Duplicate power supply for temporary emergency use.
+
+2. Failed to set work piece origin during normal operation process
+Situation analysis and solution:
+1)
+
+The system is under the absolute coordinate system due to misuse. User can switch back to the 1 st working
+coordinate system by pressing the combination keys “Menu” + “1”, then the problem will be solved.
+
+2)
+
+Key issues. Go to Menu-menu function user interface-system setup-buttons check, to test whether the button is
+normal or not.
+
+3.
+
+No text display while screen lights up
+
+Situation analysis and solution:
+1)
+
+Needs emergency recover operation: First, power off; then, keep pushing “OK” button do not release it;
+Afterwards, supply power, and waiting for 3-5 seconds, release “OK” button. The system will enter into
+“Emergency State”; choose “Update System”, “Inner Format” and “Initial Data” operations. At last, restart as usual.
+
+2)
+
+Send back for detection and repairing if the system can’t recover by emergency state.
+
+81
+
+Beijing RichAuto S&T Corp., Ltd
+
+10.2 Common problems during operation
+1. After the machining, the cutting size doesn’t match the actual size in processing file
+Situation analysis and solution:
+1)
+
+Pulse equivalent is wrong.
+
+2)
+
+User has selected the wrong tool bit which is not the same as it set in process file.
+
+3)
+
+Check if there is any problem with the path processing file.
+
+2. The screen displays “exceed limit” during processing
+Situation analysis and solution:
+1)
+
+The machine hasn’t returned ZERO, lead the system is unable to confirm the actual position. Solution is to go
+machine ZERO.
+
+2)
+
+The reserved processing range is small than the actual file size after user set work piece origin. Confirm the actual
+file size and then set a correct working origin.
+
+3)
+
+Set wrong working origin in the process of creating processing file path. Check the file path, and then generate the
+correct one.
+
+3.
+
+Spindle feed amount too much or "Breaking Edge" phenomenon occurs during processing
+
+Situation analysis and solution:
+1)
+
+The working speed written in the processing file is beyond the machine itself Z axis speed withstands. Z axis motor
+loses step and doesn’t move up to the right position when the spindle lift up, and then it will base on the wrong
+position and move down in the same depth and plunge in the material too much. Enter into “Machine Setup”“Max. Speed Limit”, change Z axis max. motion speed to the safe speed at which the Z axis can run.
+
+2)
+
+Coupling connection loose or transmission mechanism slip. Re-adjust the connecting parts.
+
+3)
+
+The signal line connected between the wiring board and the driver is disturbed. Re-adjust the line.
+
+4)
+
+Processing documents error.
+
+5)
+
+The wiring between motor and driver of Z axis is damaged due to long time using, or the connection line is too thin,
+the connection plug is loose result in current loss. Replace new wires.
+
+4.
+
+Repeating the same processing file, Z axis cutting depths are not as same as each other every time after
+returning back HOME
+
+Situation analysis and solution:
+1)
+
+Machining table is uneven or processing object not firmly fixed, re-milling the machine table to adjust the flatness.
+
+2)
+
+Z-axis origin detection switch repeat positioning accuracy error, causing Z axis homing error each time. Replace a
+high-quality detection switch.
+82
+
+Beijing RichAuto S&T Corp., Ltd
+
+3)
+
+Too much interference in the Z-axis homing process to form a false Z origin. Re-adjust the wiring.
+
+5.
+
+The machine cannot stop after returning ZERO, and lead to spindle crashs the machine body
+
+Situation analysis and solution:
+Enter into “Input Output control User Interface”, detect whether the signal can be turned on or turned off normally.
+1)
+
+The origin detection switch is broken. Replace a new one.
+
+2)
+
+The distance of the origin detection switch detection sheet beyond the detection range(This problem is common
+occurs in optoelectronic and proximity switches) of the switch, adjust the position of the test piece.
+
+3)
+
+The origin detection switch to the interface board wiring aging or loosening. Check the connections again.
+
+4)
+
+The interface board is broken. Return back o us to repair.
+
+5)
+
+50-pin data cable is broken. Replace it with a new data cable.
+
+6.
+
+The machine uniform moves to the reverse direction when backing to the machine ZERO（HOME）
+
+Situation analysis and solution:
+1)
+
+The origin detection switch types do not match with the definition of the corresponding voltage level. Modify the
+voltage level in the controller. (Normally open type corresponds to a level defined the direction of the arrow down,
+normally closed type corresponds to the level defined arrow up).
+
+2)
+
+The origin detection switch is broken. Replace a new one.
+
+3)
+
+The origin detection switch connects interface board not well. Refresh the cable to confirm the wiring is correct.
+
+4)
+
+Too much interference, resulting in the illusion of the detection switch has been triggered. Recalibrated the whole
+circuit.
+
+5)
+
+The interface board is broken. Depot Repair.
+
+6)
+
+50-pin data cable is broken. Replace the data cable.
+
+7. Abnormally running when processing or the actual file is different from theoretical file
+Situation analysis and solution:
+1)
+
+The system program disorder.
+
+2)
+
+Too much external interference lead the controller cannot work normally. Re-adjust overall circuit. (The wires of
+weak current and strong current should be separately binding, the inverter and other components should be
+separated connected each GND of themselves).
+
+3)
+
+There is something wrong while converting the file format and the program appears illegal characters or system
+unrecognized codes. Recommended to use third party simulation software to review the program paths.
+
+8.
+
+After starting up automatic tool setting, the tool bit can’t stop when it touched the tool setting device
+
+Situation analysis and solution:
+1)
+
+There is an open circuit of the cutter signal cable which is connected to X5 port
+83
+
+Beijing RichAuto S&T Corp., Ltd
+
+2)
+
+The "COM" signal port of the “INPUT” terminal on the wiring board is not well connected with spindle housing or
+poor connection.
+
+3)
+
+Go to “MACHINE SETUP”-“Input Confi” to confirm if X5 is enabled.
+
+9.
+
+It is normal to the move from one position to another, but when return back from that position to the original
+position is abnormal
+
+Mechanical assembly problem, guide ball screw is not well installed.
+
+10.3 Electrical components and wiring problems
+1.
+
+One axis or several axes can only move in one direction after power on
+
+Situation analysis and solution：
+1)
+
+There is something wrong with the connecting between the interface board and motor driver common anode
+end, check the connection.
+
+2)
+
+Interface board is broken. Replace the interface board.
+
+3)
+
+The motor driver is broken. Replace the driver.
+
+4)
+
+Measure the direction voltage of the axis with a multimeter. Check whether the direction is correct or not.
+
+2. The motor of one axis does not move after power on
+Situation analysis and solution:
+1)
+
+The driver pulse cable and direction cable connect oppositely, exchange them;
+
+2)
+
+Motor driver damaged if the motor can move when pushing it by hand;
+
+3)
+
+The interface chip on the wiring board is broken, no pulse signal output.
+
+3. The screen displays “Spindle on” but actually the spindle off; displays “Spindle off” actually the spindle on
+Situation analysis and solution:
+1)
+
+Circuit malfunction, FWD and COM is short circuit. Eliminate line failure.
+
+2)
+
+The output level definition reversed. Go to the “voltage setup” and modify the output level definition.
+
+4. The handle screen doesn’t light up or show nothing after power on
+Situation analysis and solution:
+1)
+
+The power supply voltage is too large, or power supply positive and negative short chipset is burned out, return
+back for repairing.
+
+2)
+
+Power supply damaged, replace it.
+
+3)
+
+Check if HDMI cable is damaged. Replace HDMI cable.
+
+84
+
+
