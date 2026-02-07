@@ -1,0 +1,22 @@
+---
+description: Keep plan documents in the workspace plans folder
+alwaysApply: true
+---
+
+# Plan Documents in Workspace
+
+All plan documents must be created and updated **inside the workspace** so they are versioned and visible in the project.
+
+**Canonical location:** `plans/` (at the workspace root).
+
+**Filename convention:** Use kebab-case based on the plan title (e.g. `plans-in-workspace.md`, `safe-retracts-option.md`).
+
+## When creating a new plan
+
+- Write the plan content to a file in `plans/<short-name>.md` using the **Write** tool.
+- Use a short kebab-case name derived from the plan title. This ensures the canonical copy lives in the repo in addition to any plan created via the CreatePlan tool.
+
+## When updating a plan
+
+- Read and edit the plan file in `plans/` so the canonical copy stays in the workspace.
+- Do not rely only on plan files stored outside the workspace (e.g. in Cursor’s default plan storage).
