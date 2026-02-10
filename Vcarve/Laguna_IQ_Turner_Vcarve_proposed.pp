@@ -11,6 +11,8 @@ ROTARY_WRAP_Y = "A"
 
 SUBSTITUTE = "({)}"
 
+POST_NAME = Laguna_IQ_Turner_Asmbly
+
 +------------------------------------------------
 +    Line terminating characters
 +------------------------------------------------
